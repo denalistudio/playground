@@ -1,0 +1,1 @@
+Copyright &copy; 2021 Jakub Klapka & David Brzý. All rights reserved.
