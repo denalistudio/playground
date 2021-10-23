@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
-@mixin outline {
-  box-shadow: 0 0 0 1px #c9c9c9;
-}
-
 html {
   font-family: "Roboto", sans-serif;
   color: #000;
@@ -20,5 +15,6 @@ body {
 }
 
 nav {
-  @include outline();
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
 }
