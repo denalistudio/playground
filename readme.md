@@ -6,3 +6,6 @@
 > 2. a **co**ntent-**m**-**ma**nagement system that will change the intentet as we know it
 
 All components being developed can be found in [components](components/components.md) and must be explained documented within their own Markdown document.
+
+---
+Copyright &copy; 2021 Jakub Klapka & David Brzý. All rights reserved.
