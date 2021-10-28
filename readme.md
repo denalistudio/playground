@@ -72,7 +72,7 @@ All components being developed can be found in [components](components/component
 >
 > Or spanning multiple lines...
 > 
-> ''' (the right sign is "`" on the top left of your keyboard, but it would use the syntax so we used "'" here)
+> ''' (the right sign is "`" sign on the top left of your keyboard typed out three times)
 > var example = "hello!";
 > alert(example);
 > '''
