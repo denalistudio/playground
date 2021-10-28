@@ -72,13 +72,12 @@ All components being developed can be found in [components](components/component
 >
 > Or spanning multiple lines...
 > 
-> ''' (the right sign is "`" sign on the top left of your keyboard typed out three times)
+>```ㅤ
 > var example = "hello!";
 > alert(example);
-> '''
+>```ㅤ
 > ```
-> 
-> Feel free to add any valid HTML into your Markdown file!
+> ㅤ
 
 ---
 Copyright &copy; 2021 Jakub Klapka & David Brzý. All rights reserved.
