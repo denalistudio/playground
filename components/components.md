@@ -31,7 +31,9 @@ All components must be added to the [**component table**](#components) with thei
 
 <br>
 
-## ideas
+## Ideas
+
+Simply click on any of the items to create the folder path and [Markdown](../markdown.md) file.
 
 |  name | description |
 |-|-|

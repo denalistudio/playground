@@ -1,6 +1,8 @@
 # Markdown guide
- 
-## Emphasis
+
+## Syntax
+
+### Emphasis
 
 ```
 **bold**
@@ -8,7 +10,7 @@
 ~~strikethrough~~
 ```
  
-## Headers
+### Headers
 
 ```
 # Header 1
@@ -17,7 +19,7 @@
 #### Header 4
 ```
  
-## Lists
+### Lists
 
 ```
 * Generic list item
@@ -29,26 +31,26 @@
 3. Numbered list item 3
 ```
 
-## Links
+### Links
 
 ```
 [Text to display](http://www.example.com)
 ```
  
-## Quotes
+### Quotes
 
 ```
 > This is a quote, this entire guide is in a quote.
 > It can span multiple lines!
 ```
  
-## Images
+### Images
 
 ```
 ![](http://www.example.com/image.jpg)
 ```
  
-## Tables
+### Tables
 
 ```
 | Column 1 | Column 2 | Column 3 |
@@ -64,7 +66,7 @@ Or without aligning the columns...
 | Mary | Smith | Female |
 ```
  
-## Code
+### Code
 
 ```
 `var example = "hello!";`
@@ -75,4 +77,24 @@ Or spanning multiple lines...
 var example = "hello!";
 alert(example);
 ```ㅤ
+```
+
+## Example pages
+
+### Component page
+
+```
+[readme](../../readme.md) / [components](components.md) / [myComponent](myComponentLink.md)
+ 
+# myComponent example site
+ 
+Short description included in the table on this site
+
+Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because..
+
+|  files | size | type |
+|-|-|-|
+| [file1.html](src/index.html) | 0.0 kB | .html |
+| [image2.svg](src/logo.svg) | 4.2 kB | .svg |
+| [icon.ico](src/favicon.ico) | 6.9 kB | .ico |
 ```
