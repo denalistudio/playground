@@ -7,7 +7,7 @@
 
 <br>
 
-> [readme](../../readme.md) / [components](../components.md) / [myComponent](myComponentLink.md)
+> [readme](../../readme.md) / [components](components.md) / [myComponent](myComponentLink.md)
 > 
 > # myComponent example site
 > Short description included in the table on this site
