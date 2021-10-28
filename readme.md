@@ -7,6 +7,8 @@
 
 All components being developed can be found in [components](components/components.md) and must be explained documented within their own Markdown document.
 
+<br><br><br>
+
 > ## Markdown guide
 > 
 > ### Emphasis
