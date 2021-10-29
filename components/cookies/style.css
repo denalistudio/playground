@@ -31,6 +31,13 @@ body {
   width: 50%;
   padding: 25px;
   background-color: #ffffff;
+  box-shadow: #959da533 0 8px 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal-content {
+    box-shadow: #00000033 0 8px 24px;
+  }
 }
 
 .modal-content section {
