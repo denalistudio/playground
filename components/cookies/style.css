@@ -30,6 +30,7 @@ body {
 .modal-content {
   width: 50%;
   padding: 25px;
+  border-radius: 15px;
   background-color: #ffffff;
   box-shadow: #959da533 0 8px 24px;
 }
