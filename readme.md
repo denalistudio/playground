@@ -1,17 +1,22 @@
 # Comma
-*Comma* is a **content management system** designed to make **creating** and **managing** websites easier.
+*Comma* is by definition **content management system** designed to make **creating** and **managing** websites easier, but it is much more than that in reality.
 
 > **comma** (noun) [kom-*uh*]
 > 1. the sign "**,**", a mark of division used for indicating a division in a sentence
 > 2. a **co**ntent-**m**-**ma**nagement system that will change the intentet as we know it
 
-All components being developed can be found in [components](components/components.md) and must be explained documented within their own Markdown document.
+| Table of contents |  |
+| - | - |
+| [Components](#components) |  |
+| [Markdown](#markdown) |  |
 
-| Table of contents |
-| - |
-| Components |
+## [Components](components/components.md)
+
+All components being developed can be found in [components](components/components.md) and must be explained documented within their Markdown document.
 
 ## Markdown
+
+*Markdown* is a lightweight markup language created by [John Gruber](https://daringfireball.net/) made as an easy-to-write and easy-to-read language for writers. The language can output HTML and any HTML syntax is valid in Markdown. Read more in this [Daring Fireball article](https://daringfireball.net/projects/markdown/) by the creator. The language became popular among programmers for its convenience and was popularized as the [README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) language for [GitHub](https://github.com/).
 
 ### Syntax
 
@@ -101,9 +106,9 @@ alert(example);
  
 # myComponent example site
  
-Short description included in the table on this site
+The short description included in the table on this site
 
-Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because..
+Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because...
 
 |  files | size | type |
 |-|-|-|

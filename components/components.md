@@ -1,6 +1,6 @@
-[readme](../readme.md) / [components](components.md)
+[readme.md](../readme.md) / [components.md](components.md)
 
-# components
+# Components
 
 A *component* is a **standalone section of code** that can be added to any Comma website.
 
@@ -21,7 +21,7 @@ All components must be added to the [**component table**](#components) with thei
 > 
 > Short description included in the table on this site
 >
-> Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because..
+> Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because...
 >
 > |  files | size | type |
 > |-|-|-|
@@ -39,4 +39,4 @@ Simply click on any of the items to create the folder path and [Markdown](../mar
 |-|-|
 | [feedback](feedback/feedback.md) | A lot of the times, there are [Happy or Not](https://www.happy-or-not.com/en/use-cases/retail/) buttons in physical stores - let's put simple [feedback buttons](https://twitter.com/drmzio/status/1445200552212664327?s=20) in online stores too, to better understand what customers like and what they do not |
 | [calendars](calendars/calendars.md) | Anyone can use [Google Calendar](https://www.google.com/calendar) - it's simple and powerful. Let's use this tool to make an event calendar for websites, where they can edit and change events inside Google Calendar and automatically update it on websites |
-| [reservations](reservations/reservations.md) | A simple reservation system for restaurants, jumpparks and other businesses |
+| [reservations](reservations/reservations.md) | A simple reservation system for restaurants, jump parks and other businesses |
