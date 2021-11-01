@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
-<div class="menu">
-<button onclick="insertFormating(text, '**');">B</button>
-<button id="download" onclick=saveTextAsFile(text.value,'download.md')>Download</button>
+<div id="editor">
+    <nav>
+        <button id="bold" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+        <button id="italic" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
+        <button id="strikethrough" onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
+        <button id="download" onclick=editorDownload(text.value,'download.md')>Download</button>
+    </nav>
+    <textarea autofocus id="text"></textarea>
 </div>
-<textarea autofocus id="text"></textarea>

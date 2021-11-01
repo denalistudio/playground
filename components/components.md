@@ -8,6 +8,7 @@ A *component* is a **standalone section of code** that can be added to any Comma
 |-|-|-|-|
 | [construction](construction/construction.md) | An on/off page that you can easily hide your website behind when making changes or updating it | **@jakubklapka** | 06/21 |
 | [cookies](cookies/cookies.md) | A simple cookie popup component that connects user's consent to Google Analytics | **@davidbrzy** | 27/10/21 |
+| [editor](cookies/editor.md) | | **@jakubklapka** | 27/10/21 |
 
 <br>
 

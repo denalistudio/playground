@@ -1,4 +1,4 @@
-function saveTextAsFile(textToWrite, fileNameToSaveAs) {
+function editorDownload(textToWrite, fileNameToSaveAs) {
   var textFileAsBlob = new Blob([textToWrite], { type: "text/plain" });
   var downloadLink = document.createElement("a");
   downloadLink.download = fileNameToSaveAs;
@@ -19,7 +19,7 @@ function saveTextAsFile(textToWrite, fileNameToSaveAs) {
   downloadLink.click();
 }
 
-async function insertFormating(txtarea, text) {
+async function editorInsertFormatting(txtarea, text) {
     var selectStart = txtarea.selectionStart
     var selectEnd = txtarea.selectionEnd
     var scrollPos = txtarea.scrollTop;
