@@ -12,9 +12,11 @@
 
 ## [Components](components/components.md)
 
+A **Comma** website is a collection of [**components**](components/components.md), which are movable *parts of a website* that can be easily added, modified, moved, or removed.
+
 All components being developed can be found in [components](components/components.md) and must be explained documented within their Markdown document.
 
-## Markdown
+## [Markdown](https://daringfireball.net/projects/markdown/)
 
 *Markdown* is a lightweight markup language created by [John Gruber](https://daringfireball.net/) made as an easy-to-write and easy-to-read language for writers. The language can output HTML and any HTML syntax is valid in Markdown. Read more in this [Daring Fireball article](https://daringfireball.net/projects/markdown/) by the creator. The language became popular among programmers for its convenience and was popularized as the [README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) language for [GitHub](https://github.com/).
 
