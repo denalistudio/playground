@@ -1,4 +1,8 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
-<textarea autofocus></textarea>
+<div class="menu">
+<button onclick="insertFormating(text, '**');">B</button>
+<button id="download" onclick=saveTextAsFile(text.value,'download.md')>Download</button>
+</div>
+<textarea autofocus id="text"></textarea>
