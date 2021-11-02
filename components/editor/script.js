@@ -58,5 +58,6 @@ function parseMarkdown(markdownText) {
 
 function liveParser(){
   const text = document.getElementById("text").value
-  console.log(parseMarkdown(text))
+  var htmltext = parseMarkdown(text)
+  document.getElementById('parsed').innerHTML = htmltext;
 }

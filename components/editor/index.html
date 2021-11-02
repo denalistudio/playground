@@ -7,10 +7,8 @@
         <button onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
         <button onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
         <button onclick="editorHeader(text, '#');">#</button>
-        <!---->
-        <button onclick="liveParser()">Convert</button>
-        <button onclick=editorDownload(text.value)>Download</button>
+        <button onclick=editorDownload(text.value)>Save</button>
     </nav>
-    <textarea autofocus id="text"></textarea>
+    <textarea autofocus id="text" onkeyup="liveParser()"></textarea>
 </div>
 <div id="parsed"></div>
