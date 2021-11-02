@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
+<body>
 <div id="editor">
     <nav>
         <button onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
@@ -9,6 +10,7 @@
         <button onclick="editorHeader(text, '#');">#</button>
         <button onclick=editorDownload(text.value)>Save</button>
     </nav>
-    <textarea autofocus id="text" onkeyup="liveParser()"></textarea>
+    <textarea autofocus id="text" oninput="liveParser()"></textarea>
 </div>
 <div id="parsed"></div>
+</body>
