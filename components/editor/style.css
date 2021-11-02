@@ -9,6 +9,12 @@ textarea {
   outline: none;
 }
 
-nav{
-    display: inline;
+nav {
+  display: inline;
+}
+
+#editor {
+  display: block;
+  background-color: black;
+  padding: 25px;
 }

@@ -3,10 +3,14 @@
 
 <div id="editor">
     <nav>
-        <button id="bold" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
-        <button id="italic" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
-        <button id="strikethrough" onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
-        <button id="download" onclick=editorDownload(text.value,'download.md')>Download</button>
+        <button onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+        <button onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
+        <button onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
+        <button onclick="editorHeader(text, '#');">#</button>
+        <!---->
+        <button onclick="liveParser()">Convert</button>
+        <button onclick=editorDownload(text.value)>Download</button>
     </nav>
     <textarea autofocus id="text"></textarea>
 </div>
+<div id="parsed"></div>
