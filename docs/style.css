@@ -1,1 +1,10 @@
-/* No CSS */
+body {
+  margin: 25px;
+}
+
+#editor {
+  background-color: #F1F1F1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
+}

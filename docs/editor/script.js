@@ -77,3 +77,7 @@ function devtoolsOpen(){
 function devtoolsClose(){
   document.getElementById('devtools').style.display = 'none';
 }
+
+function printTestText(){
+  document.getElementById('text').innerText = "# Test text"
+}
