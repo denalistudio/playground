@@ -17,7 +17,7 @@ nav {
 }
 
 #editor {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(241, 241, 241);
   padding: 25px;
   width: 50%;
   height: 100%;
@@ -33,4 +33,27 @@ nav {
 #parsed{
   width: 50%;
   padding: 25px;
+}
+
+#devtools{
+  display: none;
+}
+
+#editor button {
+  padding: 10px;
+  border: none;
+  width: 50px;
+  background-color: white;
+}
+
+#editor button:hover {
+ background-color: rgb(220, 220, 220);
+ cursor: pointer;
+}
+
+#editor nav{
+  background-color: white;
+  box-shadow: 0 0 0 1px #c9c9c9;
+  border-radius: 500px;
+  padding: 10px;
 }

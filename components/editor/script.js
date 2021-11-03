@@ -69,3 +69,11 @@ function liveParserOutput(){
   var htmltext = parseMarkdown(text);
   console.log('liveParser output: ' + htmltext)
 }
+
+function devtoolsOpen(){
+  document.getElementById('devtools').style.display = 'block';
+}
+
+function devtoolsClose(){
+  document.getElementById('devtools').style.display = 'none';
+}
