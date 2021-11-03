@@ -2,15 +2,16 @@
 <script src="script.js"></script>
 
 <body>
-<div id="editor">
-    <nav>
-        <button onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
-        <button onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
-        <button onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
-        <button onclick="editorHeader(text, '#');">#</button>
-        <button onclick=editorDownload(text.value)>Save</button>
-    </nav>
-    <textarea autofocus id="text" oninput="liveParser()"></textarea>
-</div>
-<div id="parsed"></div>
+    <div id="editor">
+        <nav>
+            <button onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+            <button onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
+            <button onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
+            <button onclick="editorHeader(text, '#');">#</button>
+            <button onclick=editorDownload(text.value)>Save</button>
+            <button onclick="liveParserOutput()" selected>&lt;/&gt; Output</>
+        </nav>
+        <textarea autofocus id="text" oninput="liveParser()"></textarea>
+    </div>
+    <div id="parsed"></div>
 </body>

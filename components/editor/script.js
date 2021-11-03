@@ -43,6 +43,9 @@ async function editorInsertFormatting(txtarea, text) {
 
 function parseMarkdown(markdownText) {
 	const htmlText = markdownText
+    .replace(/^###### (.*$)/gim, '<h6>$1</h6>')
+    .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
+    .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
 		.replace(/^### (.*$)/gim, '<h3>$1</h3>')
 		.replace(/^## (.*$)/gim, '<h2>$1</h2>')
 		.replace(/^# (.*$)/gim, '<h1>$1</h1>')
@@ -52,12 +55,17 @@ function parseMarkdown(markdownText) {
 		.replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
 		.replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
 		.replace(/\n$/gim, '<br>')
-
 	return htmlText.trim()
 }
 
 function liveParser(){
-  const text = document.getElementById("text").value
-  var htmltext = parseMarkdown(text)
+  const text = document.getElementById("text").value;
+  var htmltext = parseMarkdown(text);
   document.getElementById('parsed').innerHTML = htmltext;
+}
+
+function liveParserOutput(){
+  const text = document.getElementById("text").value;
+  var htmltext = parseMarkdown(text);
+  console.log('liveParser output: ' + htmltext)
 }
