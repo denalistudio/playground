@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
-</html>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
+<script src="script.js"></script>
+
+<body>
+    <div id="editor">
+        <nav>
+            <button title="Bold" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+            <button title="Italic" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
+            <button title="Strikethrough" onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
+            <button onclick="editorHeader(text, '#');">#</button>
+            <button onclick=editorDownload(text.value,'download.md')>Save</button>
+            <button title="Developer toolbar" onclick="devtoolsOpen()" ondblclick="devtoolsClose()">&lt;/&gt;</button>
+                <div id="devtools">
+                    <button onclick="liveParserOutput()">Console output</button>
+                    <button onclick="printTestText()">Testing text</button>
+                </div>
+        </nav>
+        <textarea autofocus id="text" oninput="liveParser()"></textarea>
+    </div>
+    <div id="parsed"></div>
+</body>
