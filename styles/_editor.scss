@@ -1,0 +1,43 @@
+#editor {
+  padding: 25px;
+  width: 50%;
+  background-color: $gray;
+  border-radius: $border-radius;
+  box-shadow: $outline;
+  nav {
+    display: inline;
+  }
+  button {
+    border: none;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: $border-radius;
+    box-shadow: $outline;
+    background-color: $white;
+    &:hover {
+      cursor: pointer;
+      background-color: $gray;
+    }
+  }
+  textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    font-size: 15px;
+    border-radius: $border-radius;
+    box-shadow: $outline;
+    font-family: $font-family;
+    background-color: $white;
+  }
+  #devtools {
+    display: none;
+    button {
+      width: 115px;
+    }
+  }
+}
