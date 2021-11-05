@@ -5,15 +5,6 @@ body {
   margin: 25px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lora", serif;
-}
-
 #editor {
   padding: 25px;
   width: 50%;
@@ -65,4 +56,17 @@ h6 {
 
 #editor #devtools button {
   width: 115px;
+}
+
+#editor p {
+  font-family: "Roboto", sans-serif;
+}
+
+#editor h1,
+#editor h2,
+#editor h3,
+#editor h4,
+#editor h5,
+#editor h6 {
+  font-family: "Roboto", sans-serif;
 }
