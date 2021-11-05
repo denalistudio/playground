@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="../style.css">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <script src="script.js"></script>
 
 <body>
@@ -11,10 +15,10 @@
             <button onclick="editorHeader(text, '#');">#</button>
             <button onclick=editorDownload(text.value,'download.md')>Save</button>
             <button title="Developer toolbar" onclick="devtoolsOpen()" ondblclick="devtoolsClose()">&lt;/&gt;</button>
-                <div id="devtools">
-                    <button onclick="liveParserOutput()">Console output</button>
-                    <button onclick="printTestText()">Testing text</button>
-                </div>
+            <div id="devtools">
+                <button onclick="liveParserOutput()">Console output</button>
+                <button onclick="printTestText()">Testing text</button>
+            </div>
         </nav>
         <textarea autofocus id="text" oninput="liveParser()"></textarea>
     </div>
