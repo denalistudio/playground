@@ -52,6 +52,7 @@ function parseMarkdown(markdownText) {
 		.replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
 		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
 		.replace(/\*(.*)\*/gim, '<i>$1</i>')
+    .replace(/\~\~(.*)\~\~/gim, '<s>$1</s>')
 		.replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
 		.replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
 		.replace(/\n$/gim, '<br>')
