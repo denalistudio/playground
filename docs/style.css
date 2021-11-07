@@ -16,6 +16,7 @@ body {
 
 #editor nav {
   display: inline;
+  width: 100%;
 }
 
 #editor button {

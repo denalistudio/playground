@@ -3,9 +3,11 @@ function editorDownload(textToWrite, fileNameToSaveAs) {
   var downloadLink = document.createElement("a");
   downloadLink.download = fileNameToSaveAs;
   downloadLink.innerHTML = "Download File";
-  if (window.webkitURL != null) { // Chrome
+  if (window.webkitURL != null) {
+    // Chrome
     downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-  } else { // Firefox
+  } else {
+    // Firefox
     downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
     downloadLink.onclick = destroyClickedElement;
     downloadLink.style.display = "none";
@@ -15,9 +17,7 @@ function editorDownload(textToWrite, fileNameToSaveAs) {
   downloadLink.click();
 }
 
-//
-
-async function editorInsertFormatting(txtarea, text) {
+function editorInsertFormatting(txtarea, text) {
   var selectStart = txtarea.selectionStart; // "Select" the selection
   var selectEnd = txtarea.selectionEnd;
   var scrollPos = txtarea.scrollTop;
@@ -42,43 +42,43 @@ async function editorInsertFormatting(txtarea, text) {
 }
 
 function parseMarkdown(markdownText) {
-	const htmlText = markdownText
-    .replace(/^###### (.*$)/gim, '<h6>$1</h6>')
-    .replace(/^##### (.*$)/gim, '<h5>$1</h5>')
-    .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
-		.replace(/^### (.*$)/gim, '<h3>$1</h3>')
-		.replace(/^## (.*$)/gim, '<h2>$1</h2>')
-		.replace(/^# (.*$)/gim, '<h1>$1</h1>')
-		.replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
-		.replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
-		.replace(/\*(.*)\*/gim, '<i>$1</i>')
-    .replace(/\~\~(.*)\~\~/gim, '<s>$1</s>')
-		.replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
-		.replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
-		.replace(/\n$/gim, '<br>')
-	return htmlText.trim()
+  const htmlText = markdownText
+    .replace(/\*\*(.*)\*\*/gim, "<b>$1</b>")
+    .replace(/\*(.*)\*/gim, "<i>$1</i>")
+    .replace(/\~\~(.*)\~\~/gim, "<s>$1</s>")
+    .replace(/^# (.*$)/gim, "<h1>$1</h1>")
+    .replace(/^## (.*$)/gim, "<h2>$1</h2>")
+    .replace(/^### (.*$)/gim, "<h3>$1</h3>")
+    .replace(/^#### (.*$)/gim, "<h4>$1</h4>")
+    .replace(/^##### (.*$)/gim, "<h5>$1</h5>")
+    .replace(/^###### (.*$)/gim, "<h6>$1</h6>")
+    .replace(/^\> (.*$)/gim, "<blockquote>$1</blockquote>")
+    .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+    .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+    .replace(/\n$/gim, "<br>");
+  return htmlText.trim();
 }
 
-function liveParser(){
+function liveParser() {
   const text = document.getElementById("text").value;
   var htmltext = parseMarkdown(text);
-  document.getElementById('parsed').innerHTML = htmltext;
+  document.getElementById("parsed").innerHTML = htmltext;
 }
 
-function liveParserOutput(){
+function liveParserOutput() {
   const text = document.getElementById("text").value;
   var htmltext = parseMarkdown(text);
-  console.log('liveParser output: ' + htmltext)
+  console.log("liveParser output: " + htmltext);
 }
 
-function devtoolsOpen(){
-  document.getElementById('devtools').style.display = 'block';
+function devtoolsOpen() {
+  document.getElementById("devtools").style.display = "block";
 }
 
-function devtoolsClose(){
-  document.getElementById('devtools').style.display = 'none';
+function devtoolsClose() {
+  document.getElementById("devtools").style.display = "none";
 }
 
-function printTestText(){
-  document.getElementById('text').innerText = "# Test text"
+function printTestText() {
+  document.getElementById("text").value = "# Test text";
 }
