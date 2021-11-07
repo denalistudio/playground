@@ -13,15 +13,16 @@
             <button title="Italic" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
             <button title="Strikethrough" onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
             <button onclick="editorHeader(text, '#');">#</button>
+            <button onclick=loadFile()>Load</button>
             <button onclick=editorDownload(text.value,'download.md')>Save</button>
-            <button title="Developer toolbar" onclick="devtoolsOpen()" ondblclick="devtoolsClose()">&lt;/&gt;</button>
+            <button title="Developer toolbar" onclick="editorDevtoolsOpen()" ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
             <div id="devtools">
-                <button onclick="liveParserOutput()">Console output</button>
-                <button onclick="printTestText()">Testing text</button>
+                <button onclick="editorDevtoolsConsoleOutput()">Console output</button>
+                <button onclick="editorDevtoolsTestText()">Testing text</button>
             </div>
         </nav>
         <div>
-            <textarea autofocus id="text" oninput="liveParser()"></textarea>
+            <textarea autofocus id="text" oninput="editorLiveParser()"></textarea>
             <div id="parsed"></div>
         </div>
     </div>
