@@ -1,0 +1,16 @@
+#invoice {
+  padding: 25px;
+  width: 50%;
+  background-color: $gray;
+  border-radius: $border-radius;
+  box-shadow: $outline;
+  #paper {
+    padding: 20px;
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: $outline;
+  }
+  h1 {
+    font-family: $heading;
+  }
+}
