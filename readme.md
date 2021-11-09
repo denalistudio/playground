@@ -6,6 +6,10 @@
 > 1. the sign "**,**", a mark of division used for indicating a division in a sentence
 > 2. a **co**ntent-**m**-**ma**nagement system that will change the intentet as we know it
 
+More than 39% percent of all websites on the internet in 2019 is running on WordPress: a great open source content management system. The problem is that as of 2023 it will be 20 years old. Built on old technologies like PHP, WordPress can be slow and ineffective nowadays, that is why we propose a solution: a modern content management system built on new technologies - but at the drawing board, it morphed into something much more.
+
+The Comma should not be called a content management system, but **an ecosystem of technologies**.
+
 | Table of contents |
 | - | 
 | [Components](components/components.md) |
