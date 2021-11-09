@@ -94,5 +94,4 @@ function editorDevtoolsTestText() {
     input.innerHTML = "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
   }
   editorLiveParser()
-  // hey
 }
