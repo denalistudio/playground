@@ -9,3 +9,5 @@ manageCookies.onclick = function() {
 closeButton.onclick = function() {
     modal.style.display = 'none';
 }
+
+// ddd
