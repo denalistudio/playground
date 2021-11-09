@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "components/components.md",
-            "mode": "preview"
+            "file": "docs/editor/editor.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "components/components.md",
+                "file": "docs/editor/editor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,11 +88,11 @@
   },
   "active": "6d7ea2d5d7a4cd3b",
   "lastOpenFiles": [
+    "docs/editor/editor.md",
+    "readme.md",
     "components/components.md",
     "components/construction/construction.md",
     "components/cookies/cookies.md",
-    "docs/editor/editor.md",
-    "readme.md",
     "Untitled.md",
     "license.md",
     "components/construction/logo.svg",
