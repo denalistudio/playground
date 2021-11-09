@@ -97,11 +97,13 @@ function editorDevtoolsTestText() {
 }
 
 function editorHelp() {
-  var divContents = document.getElementById("parsed").innerHTML;
   var a = window.open('', '', 'height=500, width=500');
   a.document.write('<html>');
+  a.document.write('<title>Markdown guide</title>');
   a.document.write('<body>');
-  a.document.write(divContents);
+  a.document.write('<h1>Markdown guide</h1>');
+  a.document.write('<h2>Emphasis</h2>');
+  a.document.write('<p>**bold**<br>*italic*<br>~~strikethrough~~</p>');
   a.document.write('</body></html>');
   a.document.close();
 }
