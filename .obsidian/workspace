@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "readme.md",
-            "mode": "source"
+            "file": "components/components.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "components/components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,12 +88,14 @@
   },
   "active": "6d7ea2d5d7a4cd3b",
   "lastOpenFiles": [
+    "components/components.md",
+    "components/construction/construction.md",
+    "components/cookies/cookies.md",
+    "docs/editor/editor.md",
     "readme.md",
     "Untitled.md",
     "license.md",
-    "components/construction/construction.md",
     "components/construction/logo.svg",
-    "components/components.md",
     "app/node_modules/rxjs/CODE_OF_CONDUCT.md",
     "app/node_modules/@electron-forge/template-typescript/tmpl/node_modules/@typescript-eslint/eslint-plugin/docs/rules/prefer-reduce-type-parameter.md"
   ]

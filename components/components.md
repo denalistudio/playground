@@ -1,5 +1,3 @@
-[readme.md](../readme.md) / [components.md](components.md)
-
 # Components
 
 A *component* is a **standalone section of code** that can be added to any Comma website.

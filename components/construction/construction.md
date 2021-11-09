@@ -1,5 +1,3 @@
-[readme.md](../../readme.md) / [components.md](../components.md) / [construction.md](construction.md)
-
 # construction
 An on/off page that you can easily hide your website behind when making changes or updating it
 
