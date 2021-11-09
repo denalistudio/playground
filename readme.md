@@ -6,10 +6,10 @@
 > 1. the sign "**,**", a mark of division used for indicating a division in a sentence
 > 2. a **co**ntent-**m**-**ma**nagement system that will change the intentet as we know it
 
-| Table of contents |  |
-| - | - |
-| [Components](components/components) |  |
-| [Markdown](#markdown) |  |
+| Table of contents |
+| - | 
+| [Components](components/components.md) |
+| [Markdown](#markdown) | 
 
 ## [Components](components/components.md)
 

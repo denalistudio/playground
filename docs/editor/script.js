@@ -91,7 +91,7 @@ function editorDevtoolsTestText() {
     xmlhttp.send();
     input.innerHTML = xmlhttp.responseText;
   } catch (DOMException) {
-    input.innerHTML = "Error loading file. Maybe related to filepath or CORS?";
+    input.innerHTML = "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
   }
   editorLiveParser()
 }
