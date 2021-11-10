@@ -1,6 +1,6 @@
 <head>
-    <link rel="stylesheet" href="../style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -8,24 +8,60 @@
     <script src="script.js"></script>
     <div id="invoice">
         <nav>
-            <input type="button" value="Print" onclick="printDiv()">
-            <input id="invoice-input-invoicenumber" placeholder="Invoice number" type="text" onkeyup="invoiceidWrite()">
-            <input id="invoice-input-purchasername" placeholder="Purchaser" type="text" onkeyup="invoicePurchaserNameWrite()">
+            <input id="number-input" placeholder="Invoice number" type="text"
+                onkeyup="invoiceNumber()" />
+            <input id="purchaser-input" placeholder="Purchaser" type="text"
+                onkeyup="invoiceWrite('purchaser-variable', 'purchaser-input')" />
+            <input id="address1-input" placeholder="Adress line 1" type="text"
+                onkeyup="invoiceWrite('address1-variable', 'address1-input')" />
+            <input id="address2-input" placeholder="Adress line 2" type="text"
+                onkeyup="invoiceWrite('address2-variable', 'address2-input')" />
+            <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
-            <h1>Studio Denali<span style="float: right;">Faktura <span id="invoicevariable-invoiceid"><span class="variable">ČÍSLO FAKTURY</span></span></span></h1>
-            <div id="inline" style="display: inline-flex;">
+            <style>
+                h1,
+                h2,
+                h3 {
+                    font-family: $heading;
+                }
+
+                .variable {
+                    color: rgb(175, 175, 175);
+                }
+
+                #inline {
+                    width: 100%;
+                }
+
+                #left {
+                    width: 50%;
+                }
+
+                #right {
+                    width: 50%;
+                }
+            </style>
+            <h1>
+                Studio Denali<span style="float: right">Faktura
+                    <span id="number-variable"><span class="variable">ČÍSLO FAKTURY</span></span></span>
+            </h1>
+            <div id="inline" style="display: inline-flex">
                 <div id="left">
                     <p>Dodavatel</p>
                     <h2>Jakub Klapka</h2>
                     <h3>Adresa</h3>
-                    <p>Slovenská 2947/19</p>
+                    <p>Slovenská 2947/19<br />733 01, Karviná - Hranice</p>
                 </div>
                 <div id="right">
                     <p>Odběratel</p>
-                    <h2 id="invoice-variable-purchasername"><span class="variable">ODBĚRATEL</span></h2>
+                    <h2 id="purchaser-variable">
+                        <span class="variable">ODBĚRATEL</span>
+                    </h2>
                     <h3>Adresa</h3>
-                    <p>Slovenská 2947/19</p>
+                    <p>
+                        <span id="address1-variable">ADRESA 1</span><br /><span id="address2-variable">ADRESA 2</span>
+                    </p>
                 </div>
             </div>
         </div>

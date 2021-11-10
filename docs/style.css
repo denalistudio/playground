@@ -88,23 +88,3 @@ body {
   -webkit-box-shadow: 0 0 0 1px #c9c9c9;
           box-shadow: 0 0 0 1px #c9c9c9;
 }
-
-#invoice h1, #invoice h2, #invoice h3 {
-  font-family: "Lora", serif;
-}
-
-#invoice .variable {
-  color: #afafaf;
-}
-
-#invoice #inline {
-  width: 100%;
-}
-
-#invoice #left {
-  width: 50%;
-}
-
-#invoice #right {
-  width: 50%;
-}
