@@ -12,6 +12,7 @@ function invoiceNumber() {
   var formattedNumber = ("0000" + myNumber).slice(-4);
     var invoiceNumber = month + year + formattedNumber;
   document.getElementById('number-variable').innerHTML = invoiceNumber
+  document.getElementById('bank-variable').innerHTML = invoiceNumber
 }
 
 function printDiv() {

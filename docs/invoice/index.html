@@ -8,14 +8,17 @@
     <script src="script.js"></script>
     <div id="invoice">
         <nav>
-            <input id="number-input" placeholder="Invoice number" type="text"
-                onkeyup="invoiceNumber()" />
+            <input id="number-input" placeholder="Invoice number" type="text" onkeyup="invoiceNumber()" />
             <input id="purchaser-input" placeholder="Purchaser" type="text"
                 onkeyup="invoiceWrite('purchaser-variable', 'purchaser-input')" />
             <input id="address1-input" placeholder="Adress line 1" type="text"
                 onkeyup="invoiceWrite('address1-variable', 'address1-input')" />
             <input id="address2-input" placeholder="Adress line 2" type="text"
                 onkeyup="invoiceWrite('address2-variable', 'address2-input')" />
+            <input id="ico-input" placeholder="Identification number" type="text"
+                onkeyup="invoiceWrite('ico-variable', 'ico-input')" />
+            <input id="dic-input" placeholder="Tax number" type="text"
+                onkeyup="invoiceWrite('dic-variable', 'dic-input')" />
             <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
@@ -23,11 +26,7 @@
                 h1,
                 h2,
                 h3 {
-                    font-family: $heading;
-                }
-
-                .variable {
-                    color: rgb(175, 175, 175);
+                    font-family: "Lora", serif;
                 }
 
                 #inline {
@@ -42,9 +41,10 @@
                     width: 50%;
                 }
             </style>
+            <p>Studio Denali</p>
             <h1>
-                Studio Denali<span style="float: right">Faktura
-                    <span id="number-variable"><span class="variable">ČÍSLO FAKTURY</span></span></span>
+                Faktura
+                <span id="number-variable">ČÍSLO FAKTURY</span>
             </h1>
             <div id="inline" style="display: inline-flex">
                 <div id="left">
@@ -52,18 +52,22 @@
                     <h2>Jakub Klapka</h2>
                     <h3>Adresa</h3>
                     <p>Slovenská 2947/19<br />733 01, Karviná - Hranice</p>
+                    <h3>IČO/DIČ</h3>
+                    <p>11990074 / CZ0406151889</p>
                 </div>
                 <div id="right">
                     <p>Odběratel</p>
-                    <h2 id="purchaser-variable">
-                        <span class="variable">ODBĚRATEL</span>
-                    </h2>
+                    <h2 id="purchaser-variable">ODBĚRATEL</h2>
                     <h3>Adresa</h3>
                     <p>
                         <span id="address1-variable">ADRESA 1</span><br /><span id="address2-variable">ADRESA 2</span>
                     </p>
+                    <h3>IČO/DIČ</h3>
+                    <p><span id="ico-variable">ICO</span> / <span id="dic-variable">DIC</span></p>
                 </div>
             </div>
+            <p>Variabilní symbol</p>
+            <h3 id="bank-variable">VARIABILNÍ SYMBOL</h3>
         </div>
     </div>
     <!-- end component -->
