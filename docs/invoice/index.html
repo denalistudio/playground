@@ -33,41 +33,93 @@
                     width: 100%;
                 }
 
-                #left {
+                .nobottom {
+                    margin-bottom: 0;
+                }
+
+                .notop {
+                    margin-top: 0;
+                }
+
+                .line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .w50 {
                     width: 50%;
                 }
 
-                #right {
-                    width: 50%;
+                .w33 {
+                    width: 33%;
+                }
+
+                .inline100 {
+                    display: inline-flex;
+                    width: 100%;
                 }
             </style>
-            <p>Studio Denali</p>
-            <h1>
+            <p class="nobottom">Studio Denali</p>
+            <h1 class="notop">
                 Faktura
                 <span id="number-variable">ČÍSLO FAKTURY</span>
             </h1>
-            <div id="inline" style="display: inline-flex">
-                <div id="left">
-                    <p>Dodavatel</p>
-                    <h2>Jakub Klapka</h2>
-                    <h3>Adresa</h3>
-                    <p>Slovenská 2947/19<br />733 01, Karviná - Hranice</p>
-                    <h3>IČO/DIČ</h3>
-                    <p>11990074 / CZ0406151889</p>
+            <div class="line"></div>
+            <div class="inline100" id="inline">
+                <div class="w33" id="left">
+                    <p class="nobottom">Dodavatel</p>
+                    <h2 class="notop">Jakub Klapka</h2>
+                    <h3 class="nobottom">Adresa</h3>
+                    <p class="notop">Slovenská 2947/19<br />733 01, Karviná - Hranice</p>
+                    <h3 class="nobottom">IČO/DIČ</h3>
+                    <p class="notop">11990074 / CZ0406151889</p>
                 </div>
                 <div id="right">
-                    <p>Odběratel</p>
-                    <h2 id="purchaser-variable">ODBĚRATEL</h2>
-                    <h3>Adresa</h3>
-                    <p>
+                    <p class="nobottom">Odběratel</p>
+                    <h2 class="notop" id="purchaser-variable">ODBĚRATEL</h2>
+                    <h3 class="nobottom">Adresa</h3>
+                    <p class="notop">
                         <span id="address1-variable">ADRESA 1</span><br /><span id="address2-variable">ADRESA 2</span>
                     </p>
-                    <h3>IČO/DIČ</h3>
-                    <p><span id="ico-variable">ICO</span> / <span id="dic-variable">DIC</span></p>
+                    <h3 class="nobottom">IČO/DIČ</h3>
+                    <p class="notop"><span id="ico-variable">ICO</span> / <span id="dic-variable">DIC</span></p>
                 </div>
             </div>
-            <p>Variabilní symbol</p>
-            <h3 id="bank-variable">VARIABILNÍ SYMBOL</h3>
+            <div class="line"></div>
+            <div class="inline100">
+                <div class="w33">
+                    <p class="nobottom">Bankovní účet</p>
+                    <h3 class="notop">6134961349/0800</h3>
+                </div>
+                <div class="w33">
+                    <p class="nobottom">Variabilní symbol</p>
+                    <h3 class="notop" id="bank-variable">VARIABILNÍ SYMBOL</h3>
+                </div>
+            </div>
+            <div class="inline100">
+                <div class="w33">
+                    <p class="nobottom">Způsob platby</p>
+                    <h3 class="notop">bankovní převod</h3>
+                </div>
+                <div>
+                    <p class="nobottom">Datum splatnosti</p>
+                    <h3 class="notop">DATUM SPLATNOSTI</h3>
+                </div>
+            </div>
+            <div class="inline100">
+                <div class="w33">
+                    <p class="nobottom">Datum vystavení</p>
+                    <h3 class="notop">DATUM VYSTAVENÍ</h3>
+                </div>
+                <div>
+                    <p class="nobottom">Datum zdanitelného plňění</p>
+                    <h3 class="notop">DATUM SPLATNOSTI</h3>
+                </div>
+            </div>
+            <div class="line"></div>
         </div>
     </div>
     <!-- end component -->

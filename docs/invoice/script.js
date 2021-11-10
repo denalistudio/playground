@@ -17,7 +17,7 @@ function invoiceNumber() {
 
 function printDiv() {
   var divContents = document.getElementById("paper").innerHTML;
-  var a = window.open("", "", "height=500, width=500");
+  var a = window.open("", "", "height=700, width=1000");
   a.document.write("<html>");
   a.document.write("<body>");
   a.document.write(divContents);
