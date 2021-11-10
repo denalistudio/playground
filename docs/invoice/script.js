@@ -1,5 +1,9 @@
 function invoiceidWrite() {
-    document.getElementById('invoicevariable-invoiceid').innerHTML = document.getElementById('inputInvoiceID').value;
+    document.getElementById('invoicevariable-invoiceid').innerHTML = document.getElementById('invoice-input-invoicenumber').value;
+}
+
+function invoicePurchaserNameWrite() {
+    document.getElementById('invoice-variable-purchasername').innerHTML = document.getElementById('invoice-input-purchasername').value;
 }
 
 function printDiv() {
