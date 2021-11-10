@@ -26,6 +26,7 @@ function printDiv() {
   var divContents = document.getElementById("paper").innerHTML;
   var a = window.open("", "", "height=700, width=1000");
   a.document.write("<html>");
+  a.document.write("<title>Invoice print</title>");
   a.document.write("<body>");
   a.document.write(divContents);
   a.document.write("</body></html>");
