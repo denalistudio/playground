@@ -15,6 +15,13 @@ function invoiceNumber() {
   document.getElementById('bank-variable').innerHTML = invoiceNumber
 }
 
+function invoiceDate() {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    document.getElementById('date1-variable').innerHTML = date
+    document.getElementById('date2-variable').innerHTML = date
+}
+
 function printDiv() {
   var divContents = document.getElementById("paper").innerHTML;
   var a = window.open("", "", "height=700, width=1000");

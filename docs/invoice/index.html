@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body onload="invoiceDate()">
     <!-- begin component -->
     <script src="script.js"></script>
     <div id="invoice">
@@ -20,7 +20,7 @@
             <input id="dic-input" placeholder="Tax number" type="text"
                 onkeyup="invoiceWrite('dic-variable', 'dic-input')" />
                 <input id="date-input" placeholder="Tax number" type="date"
-                onkeyup="invoiceWrite('date-variable', 'date-input')" />
+                oninput="invoiceWrite('date-variable', 'date-input')" />
             <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
@@ -114,11 +114,11 @@
             <div class="inline100">
                 <div class="w33">
                     <p class="nobottom">Datum vystavení</p>
-                    <h3 class="notop">DATUM VYSTAVENÍ</h3>
+                    <h3 class="notop" id="date1-variable">DATUM VYSTAVENÍ</h3>
                 </div>
                 <div>
                     <p class="nobottom">Datum zdanitelného plňění</p>
-                    <h3 class="notop">DATUM SPLATNOSTI</h3>
+                    <h3 class="notop" id="date2-variable">DATUM SPLATNOSTI</h3>
                 </div>
             </div>
             <div class="line"></div>
