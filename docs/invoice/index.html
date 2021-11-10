@@ -19,6 +19,8 @@
                 onkeyup="invoiceWrite('ico-variable', 'ico-input')" />
             <input id="dic-input" placeholder="Tax number" type="text"
                 onkeyup="invoiceWrite('dic-variable', 'dic-input')" />
+                <input id="date-input" placeholder="Tax number" type="date"
+                onkeyup="invoiceWrite('date-variable', 'date-input')" />
             <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
@@ -106,7 +108,7 @@
                 </div>
                 <div>
                     <p class="nobottom">Datum splatnosti</p>
-                    <h3 class="notop">DATUM SPLATNOSTI</h3>
+                    <h3 class="notop" id="date-variable">DATUM SPLATNOSTI</h3>
                 </div>
             </div>
             <div class="inline100">
