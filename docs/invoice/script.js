@@ -7,7 +7,6 @@ function invoiceNumber() {
   var a = new Date();
   var month = ("0" + (a.getMonth() + 1)).slice(-2);
   var year = ("0" + a.getFullYear()).slice(-2);
-  console.log(month + year);
   var myNumber = document.getElementById('number-input').value;
   var formattedNumber = ("0000" + myNumber).slice(-4);
     var invoiceNumber = month + year + formattedNumber;
