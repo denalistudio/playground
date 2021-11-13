@@ -1,7 +1,5 @@
 # Comma
 
-sadjhojasdoasjdoijads
-
 *Comma* is by definition **content management system** designed to make **creating** and **managing** websites easier, but it is much more than that in reality.
 
 > **comma** (noun) [kom-*uh*]
