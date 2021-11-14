@@ -1,4 +1,22 @@
 {
     "liveServer.settings.port": 1234,
     "liveServer.settings.donotShowInfoMessage": true,
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/readme.md"
+            ],
+            "config": {
+                "audience": "general",
+                "dialect": "american",
+                "domain": "general",
+                "emotions": [
+                    "neutral"
+                ],
+                "goals": [
+                    "inform"
+                ]
+            }
+        }
+    ],
 }
