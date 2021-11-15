@@ -15,9 +15,18 @@ body {
   margin: 25px;
 }
 
-iframe{
-  border: 0;
-  height: 800px
+button {
+  border: none;
+  margin: 0 10px 10px 0;
+  padding: 10px;
+  height: 50px;
+  border-radius: $border-radius;
+  box-shadow: $outline;
+  background-color: $white;
+  &:hover {
+    cursor: pointer;
+    background-color: $gray;
+  }
 }
 
 @import "./editor";
