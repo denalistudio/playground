@@ -8,25 +8,20 @@ $heading: "Lora", serif;
 $text: "Roboto", sans-serif;
 
 $white: #ffffff;
-$gray: #f1f1f1;
+$gray: #f8f8f8;
 
 body {
   font-family: $text;
   margin: 25px;
 }
 
-button {
-  border: none;
-  margin: 0 10px 10px 0;
-  padding: 10px;
-  height: 50px;
-  border-radius: $border-radius;
-  box-shadow: $outline;
-  background-color: $white;
-  &:hover {
-    cursor: pointer;
-    background-color: $gray;
-  }
+h1{
+  font-family: $heading;
+}
+
+iframe {
+  border: 0;
+  height: 800px;
 }
 
 @import "./editor";
