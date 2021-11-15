@@ -5,6 +5,11 @@ body {
   margin: 25px;
 }
 
+iframe {
+  border: 0;
+  height: 800px;
+}
+
 #editor {
   padding: 25px;
   width: 50%;

@@ -15,6 +15,11 @@ body {
   margin: 25px;
 }
 
+iframe{
+  border: 0;
+  height: 800px
+}
+
 @import "./editor";
 
 @import "./invoice";
