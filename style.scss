@@ -24,6 +24,6 @@ iframe {
   height: 800px;
 }
 
-@import "./editor";
+@import "./docs/editor/editor";
 
-@import "./invoice";
+@import "./docs/invoice/invoice";

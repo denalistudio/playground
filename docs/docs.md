@@ -38,3 +38,13 @@ Simply click on any of the items to create the folder path and [Markdown](../mar
 | [feedback](feedback/feedback.md) | A lot of the times, there are [Happy or Not](https://www.happy-or-not.com/en/use-cases/retail/) buttons in physical stores - let's put simple [feedback buttons](https://twitter.com/drmzio/status/1445200552212664327?s=20) in online stores too, to better understand what customers like and what they do not |
 | [calendars](calendars/calendars.md) | Anyone can use [Google Calendar](https://www.google.com/calendar) - it's simple and powerful. Let's use this tool to make an event calendar for websites, where they can edit and change events inside Google Calendar and automatically update it on websites |
 | [reservations](reservations/reservations.md) | A simple reservation system for restaurants, jump parks and other businesses |
+
+## Code locker
+
+### youtube.js
+```js
+function YouTubeGetID(url){
+    url = url.split(/(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+    return undefined !== url[2]?url[2].split(/[^0-9a-z_\-]/i)[0]:url[0];
+};
+```
