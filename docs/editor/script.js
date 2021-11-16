@@ -44,7 +44,7 @@ function editorInsertFormatting(txtarea, text) {
   }
   txtarea.focus();
   txtarea.scrollTop = scrollPos;
-  editorLiveParser()
+  editorLiveParser();
 }
 
 function editorDownload(textToWrite, fileNameToSaveAs) {
@@ -91,19 +91,31 @@ function editorDevtoolsTestText() {
     xmlhttp.send();
     input.innerHTML = xmlhttp.responseText;
   } catch (DOMException) {
-    input.innerHTML = "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
+    input.innerHTML =
+      "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
   }
-  editorLiveParser()
+  editorLiveParser();
 }
 
 function editorHelp() {
-  var a = window.open('', '', 'height=500, width=500');
-  a.document.write('<html>');
-  a.document.write('<title>Markdown guide</title>');
-  a.document.write('<body>');
-  a.document.write('<h1>Markdown guide</h1>');
-  a.document.write('<h2>Emphasis</h2>');
-  a.document.write('<p>**bold**<br>*italic*<br>~~strikethrough~~</p>');
-  a.document.write('</body></html>');
+  var a = window.open("", "", "height=500, width=500");
+  a.document.write("<html>");
+  a.document.write("<title>Markdown guide</title>");
+  a.document.write("<body>");
+  a.document.write("<h1>Markdown guide</h1>");
+  a.document.write("<h2>Emphasis</h2>");
+  a.document.write("<p>**bold**<br>*italic*<br>~~strikethrough~~</p>");
+  a.document.write("</body></html>");
   a.document.close();
 }
+
+function doc_keyUp(e) {
+  if (e.ctrlKey && e.keyCode == 66) {
+    editorInsertFormatting(text, "**");
+  }
+  else if (e.ctrlKey && e.keyCode == 73) {
+    editorInsertFormatting(text, "*");
+  }
+}
+
+document.addEventListener("keyup", doc_keyUp, false);
