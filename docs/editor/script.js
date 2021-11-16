@@ -47,10 +47,10 @@ function editorInsertFormatting(txtarea, text) {
   editorLiveParser();
 }
 
-function editorDownload(textToWrite, fileNameToSaveAs) {
+function editorDownload(textToWrite) {
   var textFileAsBlob = new Blob([textToWrite], { type: "text/plain" });
   var downloadLink = document.createElement("a");
-  downloadLink.download = fileNameToSaveAs;
+  downloadLink.download = 'download.md';
   downloadLink.innerHTML = "Download File";
   if (window.webkitURL != null) {
     // Chrome
