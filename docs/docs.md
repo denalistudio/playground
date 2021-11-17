@@ -1,33 +1,10 @@
-# Components
+# Docs
 
-A *component* is a **standalone section of code** that can be added to any Comma website.
-
-|  name | description | people | date |
+|  name | description | people | created |
 |-|-|-|-|
+| [editor](editor/editor.md) | A simple markwon editor with it's own Markdown parser, load and save functionality and much more | **@jakubklapka** | 5/11/21 |
 | [construction](construction/construction.md) | An on/off page that you can easily hide your website behind when making changes or updating it | **@jakubklapka** | 06/21 |
 | [cookies](cookies/cookies.md) | A simple cookie popup component that connects user's consent to Google Analytics | **@davidbrzy** | 27/10/21 |
-
-<br>
-
-All components must be added to the [**component table**](#components) with their according **name**, **description**, contributing **people** and **date** of creation. When added to the table, the component creator/maintainer must create and maintain the component's own [Markdown](../markdown.md) page according to the [example site](#) below in the components folder.
-
-<br>
-
-> [readme](../../readme.md) / [components](components.md) / [myComponent](myComponentLink.md)
-> 
-> # myComponent example site
-> 
-> Short description included in the table on this site
->
-> Much longer description, because it needs larger description, because it needs larger description, because it needs larger description, because it needs larger description, because...
->
-> |  files | size | type |
-> |-|-|-|
-> | [file1.html](src/index.html) | 0.0 kB | .html |
-> | [image2.svg](src/logo.svg) | 4.2 kB | .svg |
-> | [icon.ico](src/favicon.ico) | 6.9 kB | .ico |
-
-<br>
 
 ## Ideas
 
@@ -42,6 +19,7 @@ Simply click on any of the items to create the folder path and [Markdown](../mar
 ## Code locker
 
 ### youtube.js
+
 ```js
 function YouTubeGetID(url){
     url = url.split(/(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/)/);
