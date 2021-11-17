@@ -10,7 +10,7 @@ Below are *links* leading to **project documentation** with thorough explanation
 
 ## Ideas
 
-Simply click on any of the items to create the folder path and [Markdown](../markdown.md) file.
+Simply click on any of the items to create the folder path and Markdown file.
 
 |  name | description |
 |-|-|
