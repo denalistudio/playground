@@ -1,5 +1,7 @@
 # Docs
 
+Project documentation included right in the project folder.
+
 |  name | description | people | created |
 |-|-|-|-|
 | [editor](editor/editor.md) | A simple markwon editor with it's own Markdown parser, load and save functionality and much more | **@jakubklapka** | 5/11/21 |
