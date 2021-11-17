@@ -1,6 +1,6 @@
 # Docs
 
-Project documentation included right in the project folder.
+Project documentation with thorough explanations and more information included right in the project folder.
 
 |  name | description | people | created |
 |-|-|-|-|
