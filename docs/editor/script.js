@@ -86,7 +86,7 @@ function editorDevtoolsTestText() {
 
   // load default.txt into input box
   try {
-    let fileToLoad = "default.txt";
+    let fileToLoad = "default.md";
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", fileToLoad, false);
     xmlhttp.send();
