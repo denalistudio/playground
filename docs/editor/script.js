@@ -105,7 +105,7 @@ function editorHelp() {
   a.document.write("<body>");
   a.document.write("<h1>Markdown guide</h1>");
   a.document.write("<h2>Emphasis</h2>");
-  a.document.write("<p>**bold**<br>*italic*<br>~~strikethrough~~</p>");
+  a.document.write("<p>**<b>bold</b>**<br>*<i>italic</i>*<br>_ <u>underline</u> _<br>~~<s>strikethrough</s>~~</p>");
   a.document.write("</body></html>");
   a.document.close();
 }
