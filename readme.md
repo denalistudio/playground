@@ -12,10 +12,10 @@ The Comma should not be called a content management system, but **an ecosystem o
 
 | Table of contents |
 | - | 
-| [Components](components/components.md) |
+| [Docs](docs/docs.md) |
 | [Markdown](#markdown) | 
 
-## [Components](components/components.md)
+## [Docs](docs/docs.md)
 
 A **Comma** website is a collection of [**components**](components/components.md), which are movable *parts of a website* that can be easily added, modified, moved, or removed.
 

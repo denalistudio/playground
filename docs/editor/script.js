@@ -2,6 +2,7 @@ function editorParseMarkdown(markdownText) {
   const htmlText = markdownText
     .replace(/\*\*(.*)\*\*/gim, "<b>$1</b>") // bold
     .replace(/\*(.*)\*/gim, "<i>$1</i>") // italic
+    .replace(/\_(.*)\_/gim, "<u>$1</u>") // underline
     .replace(/\~\~(.*)\~\~/gim, "<s>$1</s>") // strikethrough
     .replace(/^# (.*$)/gim, "<h1>$1</h1>") // h1
     .replace(/^## (.*$)/gim, "<h2>$1</h2>") // h2
@@ -44,13 +45,13 @@ function editorInsertFormatting(txtarea, text) {
   }
   txtarea.focus();
   txtarea.scrollTop = scrollPos;
-  editorLiveParser()
+  editorLiveParser();
 }
 
-function editorDownload(textToWrite, fileNameToSaveAs) {
+function editorDownload(textToWrite) {
   var textFileAsBlob = new Blob([textToWrite], { type: "text/plain" });
   var downloadLink = document.createElement("a");
-  downloadLink.download = fileNameToSaveAs;
+  downloadLink.download = 'download.md';
   downloadLink.innerHTML = "Download File";
   if (window.webkitURL != null) {
     // Chrome
@@ -85,25 +86,25 @@ function editorDevtoolsTestText() {
 
   // load default.txt into input box
   try {
-    let fileToLoad = "default.txt";
+    let fileToLoad = "default.md";
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", fileToLoad, false);
     xmlhttp.send();
     input.innerHTML = xmlhttp.responseText;
   } catch (DOMException) {
-    input.innerHTML = "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
+    input.innerHTML =
+      "editorDevtoolsTestText: Error loading file - maybe related to filepath?";
   }
-  editorLiveParser()
+  editorLiveParser();
 }
 
-function editorHelp() {
-  var a = window.open('', '', 'height=500, width=500');
-  a.document.write('<html>');
-  a.document.write('<title>Markdown guide</title>');
-  a.document.write('<body>');
-  a.document.write('<h1>Markdown guide</h1>');
-  a.document.write('<h2>Emphasis</h2>');
-  a.document.write('<p>**bold**<br>*italic*<br>~~strikethrough~~</p>');
-  a.document.write('</body></html>');
-  a.document.close();
+function doc_keyUp(e) {
+  if (e.ctrlKey && e.keyCode == 66) {
+    editorInsertFormatting(text, "**");
+  }
+  else if (e.ctrlKey && e.keyCode == 73) {
+    editorInsertFormatting(text, "*");
+  }
 }
+
+document.addEventListener("keyup", doc_keyUp, false);

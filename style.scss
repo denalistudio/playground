@@ -8,13 +8,22 @@ $heading: "Lora", serif;
 $text: "Roboto", sans-serif;
 
 $white: #ffffff;
-$gray: #f1f1f1;
+$gray: #f8f8f8;
 
 body {
   font-family: $text;
   margin: 25px;
 }
 
-@import "./editor";
+h1 {
+  font-family: "Lora", serif;
+}
 
-@import "./invoice";
+iframe {
+  border: 0;
+  height: 800px;
+}
+
+@import "./docs/editor/editor";
+
+@import "./docs/invoice/invoice";

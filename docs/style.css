@@ -5,10 +5,19 @@ body {
   margin: 25px;
 }
 
+h1 {
+  font-family: "Lora", serif;
+}
+
+iframe {
+  border: 0;
+  height: 800px;
+}
+
 #editor {
   padding: 25px;
   width: 50%;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 0 1px #c9c9c9;
           box-shadow: 0 0 0 1px #c9c9c9;
@@ -33,7 +42,7 @@ body {
 
 #editor button:hover {
   cursor: pointer;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
 }
 
 #editor textarea {
@@ -75,7 +84,7 @@ body {
 #invoice {
   padding: 25px;
   width: 50%;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 0 1px #c9c9c9;
           box-shadow: 0 0 0 1px #c9c9c9;
