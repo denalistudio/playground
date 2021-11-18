@@ -12,7 +12,7 @@ The Comma should not be called a content management system, but **an ecosystem o
 
 | Table of contents |
 | - | 
-| [Components](components/components.md) |
+| [Docs](docs/docs.md) |
 | [Markdown](#markdown) | 
 
 ## [Docs](docs/docs.md)
