@@ -101,6 +101,7 @@ function editorDevtoolsTestText() {
 function editorHelp() {
   var a = window.open("", "", "height=500, width=500");
   a.document.write("<html>");
+  a.document.write("<style></style>");
   a.document.write("<title>Markdown guide</title>");
   a.document.write("<body>");
   a.document.write("<h1>Markdown guide</h1>");
