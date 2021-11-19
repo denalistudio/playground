@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-:root {
-  font-size: 16px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 25px;
@@ -34,8 +24,12 @@ iframe {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-content {
@@ -43,12 +37,14 @@ iframe {
   padding: 25px;
   border-radius: 15px;
   background-color: #ffffff;
-  box-shadow: #959da533 0 8px 24px;
+  -webkit-box-shadow: #959da533 0 8px 24px;
+          box-shadow: #959da533 0 8px 24px;
 }
 
 @media (prefers-color-scheme: dark) {
   .modal-content {
-    box-shadow: #00000033 0 8px 24px;
+    -webkit-box-shadow: #00000033 0 8px 24px;
+            box-shadow: #00000033 0 8px 24px;
   }
 }
 
@@ -86,11 +82,16 @@ iframe {
   margin: 10px;
   padding: 10px;
   border: 1px solid #e5e5e5;
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 150px 150px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 150px 150px;
+      grid-template-columns: 1fr 150px 150px;
   gap: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #manage-cookies {
@@ -112,7 +113,8 @@ iframe {
   width: 50%;
   background-color: #f8f8f8;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #c9c9c9;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
 }
 
 #editor nav {
@@ -127,7 +129,8 @@ iframe {
   width: 50px;
   height: 50px;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #c9c9c9;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
   background-color: #ffffff;
 }
 
@@ -145,7 +148,8 @@ iframe {
   height: 500px;
   font-size: 15px;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #c9c9c9;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
 }
@@ -176,14 +180,16 @@ iframe {
   width: 50%;
   background-color: #f8f8f8;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #c9c9c9;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
 }
 
 #invoice #paper {
   padding: 20px;
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #c9c9c9;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
 }
 
 #invoice nav {
