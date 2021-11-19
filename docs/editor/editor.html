@@ -1,9 +1,10 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>Editor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>$("head").load("header.html");</script>
+    <title>Editor component | Comma</title>
 </head>
 
 <body>
@@ -18,7 +19,8 @@
             <button onclick="editorHeader(text, '#');">#</button>
             <button onclick=loadFile()>Load</button>
             <button onclick=editorDownload(text.value)>Save</button>
-            <button title="Developer toolbar" onclick="editorDevtoolsOpen()" ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
+            <button title="Developer toolbar" onclick="editorDevtoolsOpen()"
+                ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
             <button onclick="editorHelp()">?</button>
             <div id="devtools">
                 <button onclick="editorDevtoolsConsoleOutput()">Console output</button>
@@ -32,3 +34,5 @@
     </div>
     <!-- end component -->
 </body>
+
+</html>

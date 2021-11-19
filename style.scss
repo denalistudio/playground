@@ -10,6 +10,16 @@ $text: "Roboto", sans-serif;
 $white: #ffffff;
 $gray: #f8f8f8;
 
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: $text;
   margin: 25px;
@@ -24,6 +34,6 @@ iframe {
   height: 800px;
 }
 
+@import "./docs/cookie-compliance/cookie-compliance";
 @import "./docs/editor/editor";
-
 @import "./docs/invoice/invoice";
