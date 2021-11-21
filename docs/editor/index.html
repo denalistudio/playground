@@ -17,7 +17,8 @@
             <button title="Underline" onclick="editorInsertFormatting(text, '_');"><u>U</u></button>
             <button title="Strikethrough" onclick="editorInsertFormatting(text, '~~');"><s>S</s></button>
             <button onclick="editorHeader(text, '#');">#</button>
-            <button onclick=loadFile()>Load</button>
+            <button onclick=clickload()>Load</button>
+            <input type="file" id="my_file">
             <button onclick=editorDownload(text.value)>Save</button>
             <button title="Developer toolbar" onclick="editorDevtoolsOpen()"
                 ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
