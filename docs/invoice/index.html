@@ -23,9 +23,21 @@
                 onkeyup="invoiceWrite('ico-variable', 'ico-input')" />
             <input id="dic-input" placeholder="Tax number" type="text"
                 onkeyup="invoiceWrite('dic-variable', 'dic-input')" />
-                <input id="date-input" placeholder="Tax number" type="date"
+                <input id="date-input" placeholder="Due date" type="date"
                 oninput="invoiceWrite('date-variable', 'date-input')" />
-            <input type="button" value="Print" onclick="printDiv()" />
+                <input id="date1-input" placeholder="Date of issue" type="date"
+                oninput="invoiceWrite('date1-variable', 'date1-input')" />
+                <input id="date2-input" placeholder="Tax date" type="date"
+                oninput="invoiceWrite('date2-variable', 'date2-input')" /> <br>
+            <input id="item1-input" placeholder="Item 1" type="text"
+            onkeyup="invoiceWrite('item1-variable', 'item1-input')" />
+            <input id="price1-input" placeholder="Price 1" type="text"
+            onkeyup="invoiceWrite('price1-variable', 'price1-input')" />
+            <input id="item2-input" placeholder="Item 2" type="text"
+            onkeyup="invoiceWrite('item2-variable', 'item2-input')" />
+            <input id="price2-input" placeholder="Price 2" type="text"
+            onkeyup="invoiceWrite('price2-variable', 'price2-input')" />
+            <br> <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
             <style>
@@ -133,19 +145,29 @@
             <div class="inline100">
                 <div class="w33">
                     <p class="nobottom">Položka</p>
-                    <h3 class="notop nobottom">POLOŽKA</h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
+                    <h3 class="notop nobottom" id="item1-variable">POLOŽKA</h3>
+                    <h3 class="notop nobottom" id="item2-variable"></h3>
+                    <h3 class="notop nobottom" id="item3-variable"></h3>
+                    <h3 class="notop nobottom" id="item4-variable"></h3>
+                    <h3 class="notop nobottom" id="item5-variable"></h3>
+                    <h3 class="notop nobottom" id="item6-variable"></h3>
+                    <h3 class="notop nobottom" id="item7-variable"></h3>
+                    <h3 class="notop nobottom" id="item8-variable"></h3>
+                    <h3 class="notop nobottom" id="item9-variable"></h3>
+                    <h3 class="notop nobottom" id="item10-variable"></h3>
                 </div>
                 <div class="w33">
                     <p class="nobottom">Cena</p>
-                    <h3 class="notop nobottom">CENA</h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
-                    <h3 class="notop nobottom"></h3>
+                    <h3 class="notop nobottom" id="price1-variable">1234,00</h3>
+                    <h3 class="notop nobottom" id="price2-variable"></h3>
+                    <h3 class="notop nobottom" id="price3-variable"></h3>
+                    <h3 class="notop nobottom" id="price4-variable"></h3>
+                    <h3 class="notop nobottom" id="price5-variable"></h3>
+                    <h3 class="notop nobottom" id="price6-variable"></h3>
+                    <h3 class="notop nobottom" id="price7-variable"></h3>
+                    <h3 class="notop nobottom" id="price8-variable"></h3>
+                    <h3 class="notop nobottom" id="price9-variable"></h3>
+                    <h3 class="notop nobottom" id="price10-variable"></h3>
                 </div>
             </div>
         </div>

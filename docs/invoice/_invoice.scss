@@ -13,4 +13,11 @@
   nav{
     padding-bottom: 10px;
   }
+  input {
+    border: none;
+    margin: 5px;
+    background-color: $white;
+    border-radius: $border-radius;
+    box-shadow: $outline;
+  }
 }
