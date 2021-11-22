@@ -37,6 +37,8 @@
             onkeyup="invoiceWrite('item2-variable', 'item2-input')" />
             <input id="price2-input" placeholder="Price 2" type="text"
             onkeyup="invoiceWrite('price2-variable', 'price2-input')" />
+            <input id="finalprice-input" placeholder="Final price" type="text"
+            onkeyup="invoiceWrite('finalprice-variable', 'finalprice-input')" />
             <br> <input type="button" value="Print" onclick="printDiv()" />
         </nav>
         <div id="paper">
@@ -170,6 +172,14 @@
                     <h3 class="notop nobottom" id="price10-variable"></h3>
                 </div>
             </div>
+            <div class="line"></div>
+            <div class="inline100">
+                <div class="w33">
+                    <p class="nobottom">Celkem k zaplacení</p>
+                    <h1 class="notop nobottom" id="finalprice-variable">1234,00 Kč</h1>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
     <!-- end component -->
