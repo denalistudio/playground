@@ -107,8 +107,22 @@ function doc_keyUp(e) {
   }
 }
 
+onkeydown = function(e) {
+  if (e.ctrlKey && e.keyCode == 85) {
+     e.preventDefault();
+     editorDownload(text.value);
+  }
+}
+
 document.addEventListener("keyup", doc_keyUp, false);
 
 function clickload(){
   document.getElementById('my_file').click();
+}
+
+function checkSettings(){
+  var settings = {"showDevTools" : true, "name" : "sucess"};
+  if(settings.showDevTools == true){
+    document.getElementById('devtools').style.display = 'inline';
+  }
 }

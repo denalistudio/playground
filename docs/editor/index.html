@@ -10,8 +10,10 @@
 <body>
     <!-- begin component -->
     <script src="script.js"></script>
+    <script id="settings" src="settings.json"></script>
     <div id="editor">
         <nav>
+            <button onclick="checkSettings()">check</button>
             <button title="Bold (Ctrl+S)" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
             <button title="Italic (Ctrl+I)" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
             <button title="Underline" onclick="editorInsertFormatting(text, '_');"><u>U</u></button>
@@ -20,7 +22,7 @@
             <button onclick=clickload()>Load</button>
             <input style="display: none;" type="file" id="my_file">
             <button onclick=editorDownload(text.value)>Save</button>
-            <button title="Developer toolbar" onclick="editorDevtoolsOpen()"
+            <button id="devtools" title="Developer toolbar" onclick="editorDevtoolsOpen()"
                 ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
             <button onclick="editorHelp()">?</button>
             <div id="devtools">
