@@ -1,3 +1,13 @@
+function editorLoad() {
+  var settings = { "showDevTools": false, "name": "jakubklapka", "showHelp" : false};
+  if (settings.showDevTools == true) {
+    document.getElementById('developer').style.display = 'inline';
+  }
+  if (settings.showHelp == true) {
+    document.getElementById('helpme').style.display = 'inline';
+  }
+}
+
 function editorParseMarkdown(markdownText) {
   const htmlText = markdownText
     .replace(/\*\*(.*)\*\*/gim, "<b>$1</b>") // bold
@@ -107,22 +117,15 @@ function doc_keyUp(e) {
   }
 }
 
-onkeydown = function(e) {
+onkeydown = function (e) {
   if (e.ctrlKey && e.keyCode == 85) {
-     e.preventDefault();
-     editorDownload(text.value);
+    e.preventDefault();
+    editorDownload(text.value);
   }
 }
 
 document.addEventListener("keyup", doc_keyUp, false);
 
-function clickload(){
+function clickload() {
   document.getElementById('my_file').click();
-}
-
-function checkSettings(){
-  var settings = {"showDevTools" : true, "name" : "sucess"};
-  if(settings.showDevTools == true){
-    document.getElementById('devtools').style.display = 'inline';
-  }
 }
