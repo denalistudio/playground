@@ -1,5 +1,5 @@
 function editorLoad() {
-  var settings = { "showDevTools": false, "name": "jakubklapka", "showHelp" : false};
+  var settings = { "showDevTools": true, "name": "jakubklapka", "showHelp" : false};
   if (settings.showDevTools == true) {
     document.getElementById('developer').style.display = 'inline';
   }
