@@ -128,4 +128,14 @@ document.addEventListener("keyup", doc_keyUp, false);
 
 function clickload() {
   document.getElementById('my_file').click();
+  editorLoadFile()
+}
+
+function editorLoadFile() {
+  var file = document.getElementById('my_file').files[0];
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    document.getElementById('text').value = e.target.result;
+  };
+  reader.readAsText(file);
 }
