@@ -25,5 +25,11 @@ All components being developed can be found in [components](components/component
 
 *Markdown* is a lightweight markup language created by [John Gruber](https://daringfireball.net/) made as an easy-to-write and easy-to-read language for writers. The language can output HTML and any HTML syntax is valid in Markdown. Read more in this [Daring Fireball article](https://daringfireball.net/projects/markdown/) by the creator. The language became popular among programmers for its convenience and was popularized as the [README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) language for [GitHub](https://github.com/).
 
+## Deno lint
+
+"deno.enable": true,
+"deno.lint": true,
+"deno.unstable": true,
+
 ---
 Copyright &copy; 2021 Jakub Klapka & David Brzý. All rights reserved.
