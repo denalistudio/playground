@@ -142,7 +142,6 @@ function editorLoadFile() {
     document.getElementById('text').value = e.target.result;
   };
   reader.readAsText(file);
-  editorLiveParser();
 }
 
 // suggested copilot code
