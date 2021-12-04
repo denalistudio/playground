@@ -1,11 +1,15 @@
 function editorLoad() {
-  var settings = { "showDevTools": false, "name": "jakubklapka", "showHelp" : false};
-  if (settings.showDevTools == true) {
-    document.getElementById('developer').style.display = 'inline';
-  }
-  if (settings.showHelp == true) {
-    document.getElementById('helpme').style.display = 'inline';
-  }
+  fetch('settings.json')
+  .then(response => response.json())
+  .then (data => {
+    console.log(data);
+    if (data.showDevTools == true) {
+      document.getElementById('developer').style.display = 'inline';
+    }
+    if (data.showHelp == true) {
+      document.getElementById('helpme').style.display = 'inline';
+    }
+  })
 }
 
 function editorParseMarkdown(markdownText) {
