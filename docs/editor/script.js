@@ -1,15 +1,15 @@
 function editorLoad() {
   fetch('settings.json')
-  .then(response => response.json())
-  .then (data => {
-    console.log(data);
-    if (data.showDevTools == true) {
-      document.getElementById('developer').style.display = 'inline';
-    }
-    if (data.showHelp == true) {
-      document.getElementById('helpme').style.display = 'inline';
-    }
-  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.showDevTools == true) {
+        document.getElementById('developer').style.display = 'inline';
+      }
+      if (data.showHelp == true) {
+        document.getElementById('helpme').style.display = 'inline';
+      }
+    })
 }
 
 function editorParseMarkdown(markdownText) {
@@ -142,4 +142,49 @@ function editorLoadFile() {
     document.getElementById('text').value = e.target.result;
   };
   reader.readAsText(file);
+}
+
+// suggested copilot code
+function editorHelp() {
+  alert(
+    "Markdown Editor\n\n" +
+    "CTRL+B - Bold\n" +
+    "CTRL+I - Italic\n" +
+    "CTRL+U - Underline\n" +
+    "CTRL+K - Link\n" +
+    "CTRL+L - List\n" +
+    "CTRL+O - Ordered List\n" +
+    "CTRL+T - Table\n" +
+    "CTRL+H - Heading\n" +
+    "CTRL+M - Horizontal Rule\n" +
+    "CTRL+P - Paragraph\n" +
+    "CTRL+S - Strikethrough\n" +
+    "CTRL+X - Code Block\n" +
+    "CTRL+Q - Quote\n" +
+    "CTRL+Z - Undo\n" +
+    "CTRL+Y - Redo\n" +
+    "CTRL+D - Date\n" +
+    "CTRL+F - File\n" +
+    "CTRL+N - New File\n" +
+    "CTRL+R - Reload File\n" +
+    "CTRL+E - Edit File\n" +
+    "CTRL+G - Gist\n" +
+    "CTRL+U - Upload File\n" +
+    "CTRL+P - Preview\n" +
+    "CTRL+H - Help\n" +
+    "CTRL+D - Developer Tools\n" +
+    "CTRL+O - Open File\n" +
+    "CTRL+S - Save File\n" +
+    "CTRL+A - Select All\n" +
+    "CTRL+C - Copy\n" +
+    "CTRL+V - Paste\n" +
+    "CTRL+X - Cut\n" +
+    "CTRL+Z - Undo\n" +
+    "CTRL+Y - Redo\n" +
+    "CTRL+F - Find\n" +
+    "CTRL+R - Replace\n" +
+    "CTRL+D - Date\n" +
+    "CTRL+N - New File\n" +
+    "CTRL+E - Edit File\n"
+  );
 }
