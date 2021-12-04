@@ -17,7 +17,7 @@ function editorParseMarkdown(markdownText) {
     .replace(/\*\*(.*)\*\*/gim, "<b>$1</b>") // bold
     .replace(/\*(.*)\*/gim, "<i>$1</i>") // italic
     .replace(/\_(.*)\_/gim, "<u>$1</u>") // underline
-    .replace(/\~\~(.*)\~\~/gim, "<s>$1</s>") // strikethrough
+    .replace(/\-(.*)\-/gim, "<s>$1</s>") // strikethrough
     .replace(/^# (.*$)/gim, "<h1>$1</h1>") // h1
     .replace(/^## (.*$)/gim, "<h2>$1</h2>") // h2
     .replace(/^### (.*$)/gim, "<h3>$1</h3>") // h3
