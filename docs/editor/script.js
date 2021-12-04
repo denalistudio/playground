@@ -128,7 +128,7 @@ document.addEventListener("keyup", doc_keyUp, false);
 
 function clickload() {
   document.getElementById('my_file').click();
-  editorLoadFile()
+  editorLoadFile();
 }
 
 function editorLoadFile() {
