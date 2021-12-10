@@ -114,7 +114,7 @@ iframe {
   cursor: pointer;
 }
 
-#editor {
+#editor-md {
   padding: 25px;
   width: 50%;
   background-color: #f8f8f8;
@@ -123,12 +123,12 @@ iframe {
           box-shadow: 0 0 0 1px #c9c9c9;
 }
 
-#editor nav {
+#editor-md nav {
   display: inline;
   width: 100%;
 }
 
-#editor button {
+#editor-md button {
   border: none;
   margin: 0 10px 10px 0;
   padding: 10px;
@@ -140,12 +140,12 @@ iframe {
   background-color: #ffffff;
 }
 
-#editor button:hover {
+#editor-md button:hover {
   cursor: pointer;
   background-color: #f8f8f8;
 }
 
-#editor textarea {
+#editor-md textarea {
   border: none;
   outline: none;
   resize: none;
@@ -160,24 +160,24 @@ iframe {
   background-color: #ffffff;
 }
 
-#editor #devtools {
+#editor-md #devtools {
   display: none;
 }
 
-#editor #devtools button {
+#editor-md #devtools button {
   width: 115px;
 }
 
-#editor p {
+#editor-md p {
   font-family: "Roboto", sans-serif;
 }
 
-#editor h1,
-#editor h2,
-#editor h3,
-#editor h4,
-#editor h5,
-#editor h6 {
+#editor-md h1,
+#editor-md h2,
+#editor-md h3,
+#editor-md h4,
+#editor-md h5,
+#editor-md h6 {
   font-family: "Roboto", sans-serif;
 }
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>$("head").load("../../head.html");</script>
+    <title>Editor-md | Comma</title>
+</head>
+
+<body onload="editorLoad()">
+    <!-- begin component -->
+    <script src="script.js"></script>
+    <script id="settings" src="settings.json"></script>
+    <div id="editor-md">
+        <nav>
+            <button title="Bold (Ctrl+S)" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+            <button title="Italic (Ctrl+I)" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
+            <button title="Underline" onclick="editorInsertFormatting(text, '_');"><u>U</u></button>
+            <button title="Strikethrough" onclick="editorInsertFormatting(text, '-');"><s>S</s></button>
+            <button onclick="editorHeader(text, '#');">#</button>
+            <button onclick=clickload()>Load</button>
+            <input style="display: none;" type="file" id="my_file">
+            <button onclick=editorDownload(text.value)>Save</button>
+            <button id="developer" style="display: none;" title="Developer toolbar" onclick="editorDevtoolsOpen()"
+                ondblclick="editorDevtoolsClose()">&lt;/&gt;</button>
+            <button id="helpme" style="display: none;" onclick="editorHelp()">?</button>
+            <div id="devtools">
+                <button onclick="editorDevtoolsConsoleOutput()">Console output</button>
+                <button onclick="editorDevtoolsTestText()">Testing text</button>
+            </div>
+        </nav>
+        <div>
+            <textarea autofocus id="text" oninput="editorLiveParser()"></textarea>
+            <div id="parsed"></div>
+        </div>
+    </div>
+    <!-- end component -->
+</body>
+
+</html>
