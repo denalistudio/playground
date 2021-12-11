@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs" id="website">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=no">
+    <meta name="authors" content="David Brzý & Jakub Klapka">
+    <meta name="description"
+        content="Náš obchůdek s názvem Kouzlo květin Vám chce nabídnout to nejlepší z dostupného květinového trhu, kvalitu a krásu květin.">
+    <meta name="keywords"
+        content="obchod s květinami, květinářství, květiny, flowers, florists, florist karviná, květiny karviná, rozvoz květin karviná, krásné květiny, zdobení květinami, řekni to květinou">
+    <title>Website</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Website</h1>
+    </header>
+    <div class="hero"></div>
+    <section class="about-us">
+        <a class="anchor" name="anchor_about-us"></a>
+        <div class="section-rectangle"></div>
+        <h1>O nás</h1>
+        <p class="about-us_paragraph-1">
+            Náš obchůdek s názvem Kouzlo květin Vám chce nabídnout to nejlepší z dostupného květinového trhu, kvalitu a
+            krásu květin. Můžete darovat květinu formou PŘEKVAPENÍ, doručíme ji na Vámi danou adresu, s přáním Vašeho
+            textu. Dále u nás mužete zakoupit keramiku, hrnkové květiny, nabízíme také velký výběr plastových i
+            keramických květináčů, vonné a dekorativní svíčky. Také něco sladkého a dobrého k pití. Službou pro Vás je
+            luxsusní balení dárku. Se svatební kytičkou, výzdobou sálu, zdobením svatebního nebo darovaného auta Vám
+            také radi poradíme.</p>
+        <p class="about-us_paragraph-2">Naše heslo zní <b>ŘEKNI TO KVĚTINOU...</b></p>
+    </section>
+    <section class="offer">
+        <a class="anchor" name="anchor_offer"></a>
+        <div class="section-rectangle"></div>
+        <h1 class="offer-heading">Nabízíme</h1>
+        <div class="offer-list">
+            <ul id="offer-ul">
+                <li>Řezané květiny</li>
+                <li>Hrnkové rostliny</li>
+                <li>Dárkové předměty a vína</li>
+                <li>Svíce a svícny</li>
+                <li>Keramiku</li>
+                <li>Svatební kytice</li>
+                <li>Smuteční kytice</li>
+                <li>Adventní věnce</li>
+                <li>Navrhujeme a provádíme dekorace interiéru</li>
+                <li>Lukusní balení dárků</li>
+                <li>Rozvoz květin</li>
+            </ul>
+        </div>
+        <script>
+            ulHeight();
+            window.addEventListener('resize', ulHeight);
+            function ulHeight() {
+                var ulHeight = document.querySelector('#offer-ul').clientHeight;
+                document.documentElement.style.setProperty('--ulHeight', ulHeight + 'px');
+            };
+        </script>
+        <div class="offer-img">
+            <img src="img-offer.jpg">
+        </div>
+    </section>
+    <section class="gallery">
+        <a class="anchor" name="anchor_gallery"></a>
+        <div class="section-rectangle"></div>
+        <h1>Galerie</h1>
+        <div class="gallery-grid">
+            <a href="https://www.instagram.com/p/B0L257YId3Y/" target="_blank"><img src="img-1.jpg"></a>
+            <a href="https://www.instagram.com/p/CEwC9YTJzYA/" target="_blank"><img src="img-2.jpg"></a>
+            <a href="https://www.instagram.com/p/B0L2cUyI2bO/" target="_blank"><img src="img-3.jpg"></a>
+            <a href="https://www.instagram.com/p/Bxkoj9AI1cM/" target="_blank"><img src="img-4.jpg"></a>
+            <a href="https://www.instagram.com/p/CLEOcL8J-rJ/" target="_blank"><img src="img-5.jpg"></a>
+            <a href="https://www.instagram.com/p/CFeVsefpEXk/" target="_blank"><img src="img-6.jpg"></a>
+        </div>
+    </section>
+    <section class="contact">
+        <a class="anchor" name="anchor_contact"></a>
+        <div class="section-rectangle"></div>
+        <h1>Kontakt</h1>
+        <p class="contact-name">Michaela Kochová</p>
+        <a href="tel:+420605290921">
+            <p>+420 605 290 921</p>
+        </a>
+        <a href="mailto:kouzlokvetin@seznam.cz">
+            <p>kouzlokvetin@seznam.cz</p>
+        </a>
+        <div class="contact-social-media">
+            <a href="https://www.facebook.com/kouzlo.kvetin" target="_blank">
+                <img src="facebook.png">
+            </a>
+            <a href="https://www.instagram.com/kouzlokvetin/" target="_blank">
+                <img src="instagram.png">
+            </a>
+        </div>
+        <h2>Otevírací doba</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Pondělí - pátek</p>
+                    </td>
+                    <td>
+                        <p>8.00 - 18.00</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Sobota</p>
+                    </td>
+                    <td>
+                        <p>7.00 - 17.00</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Adresa</h2>
+        <p>Fryštátská 58/63</p>
+        <p>733 01, Karviná</p>
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1286.3224377479555!2d18.54971611619108!3d49.849129884817145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711555781a40e2d%3A0x11acb786172a8cb4!2sKouzlo%20kv%C4%9Btin%20Karvin%C3%A1!5e0!3m2!1scs!2scz!4v1637343306019!5m2!1scs!2scz"
+                width="100%" height="100%" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div id="signature">
+            <a href="https://www.studiodenali.cz/" target="_blank">
+                <p>Vytvořilo Studio Denali
+                    <span>
+                        <svg width="15" height="12" viewBox="0 0 15 12">
+                            <path d="M7.387,0l7.388,12l-14.775,0l7.387,-12Z" />
+                        </svg>
+                    </span>
+                </p>
+            </a>
+        </div>
+        <p><a href="https://cs.wikipedia.org/wiki/Autorsk%C3%A9_pr%C3%A1vo">&copy; </a>
+            <script>document.write(new Date().getFullYear())</script> Kouzlo květin
+        </p>
+    </footer>
+</body>
+
+</html>

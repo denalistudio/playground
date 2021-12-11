@@ -12,10 +12,17 @@
     <script id="settings" src="settings.json"></script>
     <div id="editor">
         <nav>
-            <button title="Bold (Ctrl+S)" onclick="format('bold');"><b>B</b></button>
-            <button title="Italic (Ctrl+I)" onclick="format('italic');"><i>I</i></button>
-            <button title="Underline" onclick="format('underline');"><u>U</u></button>
-            <button title="Strikethrough" onclick="format('strikethrough');"><s>S</s></button>
+            <button title="Bold (Ctrl+S)" onclick="format('bold','');"><b>B</b></button>
+            <button title="Italic (Ctrl+I)" onclick="format('italic','');"><i>I</i></button>
+            <button title="Underline" onclick="format('underline','');"><u>U</u></button>
+            <button title="Strikethrough" onclick="format('strikethrough','');"><s>S</s></button>
+            <button onclick="format('heading','H1');">Heading 1</button>
+            <button onclick="format('heading','H2');">Heading 2</button>
+            <button onclick="format('heading','H3');">Heading 3</button>
+            <button onclick="format('heading','H4');">Heading 4</button>
+            <button onclick="format('heading','H5');">Heading 5</button>
+            <button onclick="format('heading','H6');">Heading 6</button>
+            <button onclick="countWords()">COUNT</button>
         </nav>
         <div autofocus contenteditable="true" id="text"></div>
     </div>

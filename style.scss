@@ -31,7 +31,8 @@ iframe {
   height: 800px;
 }
 
+@import "./docs/website/website";
 @import "./docs/cookies/cookies";
 @import "./docs/editor/editor";
-@import "./docs/editor-md/editor";
+@import "./docs/editor/markdown/editor";
 @import "./docs/invoice/invoice";
