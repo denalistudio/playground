@@ -9,6 +9,7 @@ body {
   margin: 25px;
   width: 100%;
   overflow-x: hidden;
+  background-color: #f8f8f8;
 }
 
 h1 {
@@ -114,22 +115,27 @@ iframe {
   cursor: pointer;
 }
 
-body {
-  background-color: #f8f8f8;
-}
-
-nav {
+#editor nav {
+  display: inline;
+  position: fixed;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 0 1px #c9c9c9;
           box-shadow: 0 0 0 1px #c9c9c9;
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 50px;
 }
 
-#text {
+#editor nav h1 {
+  width: 200px;
+}
+
+#editor nav button {
+  font-family: "Lora", serif;
+}
+
+#editor #text {
   margin: auto;
   margin-top: 5%;
   color: black;
@@ -138,10 +144,10 @@ nav {
           box-shadow: 0 0 0 1px #c9c9c9;
   padding: 40px;
   width: 1000px;
-  height: 2500px;
+  height: 1400px;
 }
 
-#text:focus {
+#editor #text:focus {
   outline: none;
 }
 
