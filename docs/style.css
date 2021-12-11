@@ -114,6 +114,37 @@ iframe {
   cursor: pointer;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
+nav {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#text {
+  margin: auto;
+  margin-top: 5%;
+  color: black;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+          box-shadow: 0 0 0 1px #c9c9c9;
+  padding: 40px;
+  width: 1000px;
+  height: 2500px;
+}
+
+#text:focus {
+  outline: none;
+}
+
 #editor-md {
   padding: 25px;
   width: 50%;

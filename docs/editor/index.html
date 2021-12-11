@@ -7,21 +7,18 @@
     <title>Editor | Comma</title>
 </head>
 
-<body onload="editorLoad()">
-    <!-- begin component -->
+<body>
     <script src="script.js"></script>
     <script id="settings" src="settings.json"></script>
     <div id="editor">
         <nav>
-            <button title="Bold (Ctrl+S)" onclick="editorInsertFormatting(text, '**');"><b>B</b></button>
+            <button title="Bold (Ctrl+S)" onclick="add_tags('b');"><b>B</b></button>
             <button title="Italic (Ctrl+I)" onclick="editorInsertFormatting(text, '*');"><i>I</i></button>
             <button title="Underline" onclick="editorInsertFormatting(text, '_');"><u>U</u></button>
             <button title="Strikethrough" onclick="editorInsertFormatting(text, '-');"><s>S</s></button>
-        <div>
-            <div autofocus contenteditable="true" id="text">fuck this fucking shit</div>
-        </div>
+        </nav>
+        <div autofocus contenteditable="true" id="text"></div>
     </div>
-    <!-- end component -->
 </body>
 
 </html>
