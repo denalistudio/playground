@@ -1,21 +1,20 @@
 #editor {
-
-nav {
-    display: inline;
-    position: fixed;
-    background-color: $white;
-    box-shadow: $outline;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    h1{
-        width: 200px;
+    nav {
+        display: inline;
+        position: fixed;
+        background-color: $white;
+        box-shadow: $outline;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        h1 {
+            width: 200px;
+        }
+        button {
+            font-family: $heading;
+        }
     }
-    button{
-        font-family: $heading;
-    }
-}
     #text {
         margin: auto;
         margin-top: 5%;
@@ -28,5 +27,15 @@ nav {
         &:focus {
             outline: none;
         }
+    }
+    #counter {
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        background-color: $white;
+        box-shadow: $outline;
+        border-radius: $border-radius;
+        padding: 10px;
+        width: 50px
     }
 }
