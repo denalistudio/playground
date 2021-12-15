@@ -22,8 +22,12 @@ body {
   background-color: $gray;
 }
 
-h1 {
-  font-family: "Lora", serif;
+h1, h2, h3 {
+  font-family: $heading;
+}
+
+.commamita {
+  margin: auto;
 }
 
 iframe {
