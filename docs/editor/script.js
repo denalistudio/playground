@@ -23,7 +23,7 @@ function editorLoad() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            if (data.showDevTools == true) {
+            if (data.editor.showDevTools == true) {
                 document.getElementById('developer').style.display = 'inline';
             }
             if (data.showHelp == true) {

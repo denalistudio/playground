@@ -1,5 +1,7 @@
 {
 	"name" : "jakubklapka",
-	"showDevTools" : false,
-	"showHelp" : false
+	"editor" : {
+		"showDevTools" : false,
+		"showHelp" : false
+	}
 }
