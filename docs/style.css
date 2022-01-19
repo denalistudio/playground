@@ -42,7 +42,8 @@ h2 {
   color: #000;
   font-size: 1.5rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-align: center;
+  font-family: "Lora", serif;
 }
 
 header {
@@ -205,4 +206,17 @@ main {
 footer p {
   text-align: center;
   padding: 1em 0;
+}
+
+#cookies {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#cookies button {
+  background-color: #20c020;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-left: 25px;
 }
