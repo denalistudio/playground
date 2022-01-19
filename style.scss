@@ -1,41 +1,164 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-$border-radius: 5px;
-$outline: 0 0 0 1px #c9c9c9;
+$accent: #712b31;
+$heading: 'Lora', serif;
+$text: 'Roboto', sans-serif;
 
-$heading: "Lora", serif;
-$text: "Roboto", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-$white: #ffffff;
-$gray: #f8f8f8;
-
-:root {
-  font-size: 16px;
+html {
+    font-size: 100%;
 }
 
 body {
-  font-family: $text;
-  margin: 25px;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: $gray;
+    height: 100vh;
+    font-family: $text;
 }
 
-h1, h2, h3 {
-  font-family: $heading;
+p {
+    color: #000;
+    font-family: $text;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
-.commamita {
-  margin: auto;
+h1 {
+    color: $accent;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    @media (min-width: 36em) {
+        font-size: 2.6rem;
+    }
 }
 
-iframe {
-  border: 0;
-  height: 800px;
+h2 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-@import "./docs/website/website";
-@import "./docs/cookies/cookies";
-@import "./docs/editor/editor";
-@import "./docs/invoice/invoice";
+header {
+    background-color: $accent;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 62em) {
+        height: 80%;
+    }
+}
+
+.mobile-hero {
+    width: 80%;
+    @media (min-width: 36em) {
+        display: none;
+    }
+}
+
+.desktop-hero {
+    display: none;
+    @media (min-width: 36em) {
+        display: block;
+        width: 85%;
+    }
+    @media (min-width: 48em) {
+        width: 80%;
+    }
+    @media (min-width: 75em) {
+        width: 60%;
+    }
+}
+
+main {
+    margin: 3em 1em;
+    @media (min-width: 36em) {
+        width: 85%;
+        margin: 3em auto;
+    }
+    @media (min-width: 48em) {
+        width: 80%;
+        margin: 4em auto;
+    }
+    @media (min-width: 75em) {
+        width: 60%;
+    }
+}
+
+.divider {
+    width: 6.25em;
+    height: 0.625em;
+    margin: 3em auto;
+    background-color: $accent;
+    @media (min-width: 48em) {
+        margin: 4em auto;
+    }
+}
+
+.text {
+    @media (min-width: 62em) {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.gallery {
+    display: grid;
+    gap: 1em;
+    grid-template-rows: 3fr;
+    grid-template-columns: repeat(1, 1fr);
+    @media (min-width: 36em) {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.img-1, .img-2, .img-3 {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-1 {
+    background-image: url("https://picsum.photos/500");
+}
+
+.img-2 {
+    background-image: url("https://picsum.photos/300");
+}
+
+.img-3 {
+    background-image: url("https://picsum.photos/400");
+}
+
+.testimonial {
+    margin: 2em 0;
+    @media (min-width: 62em) {
+        width: 70%;
+        margin: 2em auto;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+.contact p {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+footer p {
+    text-align: center;
+    padding: 1em 0;
+}

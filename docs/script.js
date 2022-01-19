@@ -1,16 +1,6 @@
-function frame(url) {
-    document.getElementById('frame').src = url;
-}
-
-// define a handler
-function doc_keyUp(e) {
-
-    // this would test for whichever key is 40 (down arrow) and the ctrl key at the same time
-    if (e.altKey && e.keyCode == 49) {
-        // call your function to do the thing
-        frame('./editor/index.html');
+function makeEditable() {
+    var editable = document.querySelectorAll('h1, h2, h3, p');
+    for (var i = 0; i < editable.length; i++) {
+        editable[i].contentEditable = 'true';
     }
-
 }
-// register the handler 
-document.addEventListener('keyup', doc_keyUp, false);
