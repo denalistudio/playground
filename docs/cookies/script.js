@@ -1,11 +1,14 @@
-var modal = document.getElementById('modal');
-var manageCookies = document.getElementById('manage-cookies')
-var closeButton = document.getElementsByClassName('close')[0];
-
-manageCookies.onclick = function() {
-    modal.style.display = 'flex';
-}
-
-closeButton.onclick = function() {
-    modal.style.display = 'none';
+function cookies(kind) {
+    switch (kind) {
+        case 'basic':
+            var div = document.createElement('div');
+            div.id = 'cookies';
+            div.innerHTML = 'By continuing to use this website, you agree to our use of cookies. <button id="cookies-ok">OK</button>';
+            div.className = 'border pad';
+            div.style.position = 'fixed';
+            document.body.appendChild(div);
+            break;
+        default:
+            console.log('cookies: The "kind" parameter is not defined correctly.');
+    }
 }
