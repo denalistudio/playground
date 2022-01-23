@@ -1,6 +1,7 @@
 {
     "name": "Test website",
     "description": "Internal website for testing",
+    "author": "Jakub Klapka & David Brzý",
     "url": "http://www.example.com",
     "main": {
         "index": "./index.html",
