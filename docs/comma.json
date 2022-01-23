@@ -10,12 +10,20 @@
     },
     "modules": {
         "cookies": {
-            "version": 1.0
+            "version": 1.0,
+            "source": "../library/cookies/script.js"
+        },
+        "construction": {
+            "version": 1.0,
+            "source": "../library/construction/script.js"
         },
         "editor": {
             "version": 1.0,
-            "showDevTools": false,
-            "showHelp": false
+            "source": null,
+            "options" : {
+                "showDevTools": false,
+                "showHelp": false
+            }
         }
     }
 }
