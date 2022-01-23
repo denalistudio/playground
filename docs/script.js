@@ -5,7 +5,7 @@ fetch('./comma.json')
         // Metadata and links
         // --------------------------------------------------
         // Set the document title
-        document.title = config.name;
+        document.title = data.name;
         // Link the stylesheet
         var stylesheet = document.createElement('link');
         stylesheet.setAttribute('rel', 'stylesheet');
