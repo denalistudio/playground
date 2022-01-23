@@ -1,4 +1,4 @@
-function cookies(kind) {
+export function cookies(kind) {
     switch (kind) {
         case 'basic':
             var div = document.createElement('div');
