@@ -3,9 +3,9 @@
     "description": "Internal website for testing",
     "url": "http://www.example.com",
     "main": {
-        "index": "../docs/index.html",
-        "script": "../docs/script.js",
-        "style": "../docs/style.css"
+        "index": "./index.html",
+        "script": "./script.js",
+        "style": "./style.css"
     },
     "modules": {
         "cookies": {
