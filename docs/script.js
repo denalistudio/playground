@@ -1,7 +1,6 @@
 fetch('./comma.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         // Metadata and links
         // --------------------------------------------------
         // Set the document title
