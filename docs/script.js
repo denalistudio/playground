@@ -31,6 +31,13 @@ fetch('./comma.json')
         themecolor.setAttribute('name', 'theme-color');
         themecolor.content = data.color;
         document.getElementsByTagName('head')[0].appendChild(themecolor);
+        // If true, set noindex property
+        if (data.noindex == true) {
+            var noindex = document.createElement('meta');
+            noindex.setAttribute('name', 'robots');
+            noindex.content = 'noindex';
+            document.getElementsByTagName('head')[0].appendChild(noindex);
+        }
     })
 
 function makeEditable() {

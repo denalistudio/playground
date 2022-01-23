@@ -5,6 +5,7 @@
     "keywords": "test, website",
     "color": "#000000",
     "url": "http://www.example.com",
+    "noindex": true,
     "files": {
         "index": "./index.html",
         "script": "./script.js",
