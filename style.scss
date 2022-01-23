@@ -5,6 +5,13 @@ $accent: #712b31;
 $heading: 'Lora', serif;
 $text: 'Roboto', sans-serif;
 
+@mixin shadow {
+    box-shadow: #959da533 0 0.5em 1.5em;
+    @media (prefers-color-scheme: dark) {
+      box-shadow: #00000033 0 0.5em 1.5em;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -165,6 +172,7 @@ footer p {
 }
 
 #cookies {
+    @include shadow();
     padding: 15px;
     border-radius: 10px;
     background-color: white;

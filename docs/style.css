@@ -209,9 +209,18 @@ footer p {
 }
 
 #cookies {
+  -webkit-box-shadow: #959da533 0 0.5em 1.5em;
+          box-shadow: #959da533 0 0.5em 1.5em;
   padding: 15px;
   border-radius: 10px;
   background-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  #cookies {
+    -webkit-box-shadow: #00000033 0 0.5em 1.5em;
+            box-shadow: #00000033 0 0.5em 1.5em;
+  }
 }
 
 #cookies button {

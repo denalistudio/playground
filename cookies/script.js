@@ -9,9 +9,12 @@ function cookies(kind) {
             div.style.bottom = '40px';
             div.style.margin = 'auto';
             document.body.appendChild(div);
-            console.log('cookies: The "basic" cookie button kind has been loaded.');
+            console.log('cookies: The "basic" form kind has been loaded.');
+            break;
+        case 'left-big':
+            console.log('cookies: The "left-big" kind should be loaded, but is not implemented yet.');
             break;
         default:
-            console.log('cookies: The "kind" parameter is not defined correctly.');
+            console.log('cookies: The function parameters are not defined correctly.');
     }
 }
