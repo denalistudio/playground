@@ -19,7 +19,7 @@ function count(target) {
 }
 
 function editorLoad() {
-    fetch('settings.json')
+    fetch('../docs/comma.json')
         .then(response => response.json())
         .then(data => {
             console.log(data);

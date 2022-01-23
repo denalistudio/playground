@@ -1,10 +1,13 @@
 {
     "name": "Test website",
+    "description": "Internal website for testing",
+    "url": "http://www.example.com",
+    "index": "../docs/index.html",
     "modules": {
+        "cookies": {},
         "editor": {
             "showDevTools": false,
             "showHelp": false
-        },
-        "cookies": {}
+        }
     }
 }
