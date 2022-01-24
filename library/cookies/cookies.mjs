@@ -15,6 +15,6 @@ export function cookies(kind) {
             console.log('cookies: The "left-big" kind should be loaded, but is not implemented yet.');
             break;
         default:
-            console.log('cookies: The function parameters are not defined correctly.');
+            console.error('cookies: The function parameters are not defined correctly.');
     }
 }
