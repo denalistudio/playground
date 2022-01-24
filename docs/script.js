@@ -2,7 +2,23 @@ fetch('./comma.json')
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // Metadata and links
+        // Document basics
+        // --------------------------------------------------
+        // Set the document character set
+        var stylesheet = document.createElement('link');
+        stylesheet.setAttribute('charset', 'UTF-8');
+        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        // Set Q-UA Compatible prperty
+        var stylesheet = document.createElement('link');
+        stylesheet.setAttribute('name', 'viewport');
+        stylesheet.href = 'width=device-width, initial-scale=1.0';
+        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        // Set Q-UA compatible prperty
+        var stylesheet = document.createElement('link');
+        stylesheet.setAttribute('http-equiv', 'X-UA-Compatible');
+        stylesheet.href = 'IE=edge';
+        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        // Comma metadata and links
         // --------------------------------------------------
         // Set the document title
         document.title = data.name;
