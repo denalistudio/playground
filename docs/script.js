@@ -5,19 +5,19 @@ fetch('./comma.json')
         // Document basics
         // --------------------------------------------------
         // Set the document character set
-        var stylesheet = document.createElement('link');
-        stylesheet.setAttribute('charset', 'UTF-8');
-        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        var charset = document.createElement('meta');
+        charset.setAttribute('charset', 'UTF-8');
+        document.getElementsByTagName('head')[0].appendChild(charset);
         // Set Q-UA Compatible prperty
-        var stylesheet = document.createElement('link');
-        stylesheet.setAttribute('name', 'viewport');
-        stylesheet.href = 'width=device-width, initial-scale=1.0';
-        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        var viewport = document.createElement('meta');
+        viewport.setAttribute('name', 'viewport');
+        viewport.href = 'width=device-width, initial-scale=1.0';
+        document.getElementsByTagName('head')[0].appendChild(viewport);
         // Set Q-UA compatible prperty
-        var stylesheet = document.createElement('link');
-        stylesheet.setAttribute('http-equiv', 'X-UA-Compatible');
-        stylesheet.href = 'IE=edge';
-        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        var equiv = document.createElement('meta');
+        equiv.setAttribute('http-equiv', 'X-UA-Compatible');
+        equiv.href = 'IE=edge';
+        document.getElementsByTagName('head')[0].appendChild(equiv);
         // Comma metadata and links
         // --------------------------------------------------
         // Set the document title
