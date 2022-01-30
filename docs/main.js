@@ -11,12 +11,12 @@ fetch('./comma.json')
         // Set Q-UA Compatible prperty
         var viewport = document.createElement('meta');
         viewport.setAttribute('name', 'viewport');
-        viewport.href = 'width=device-width, initial-scale=1.0';
+        viewport.content = 'width=device-width, initial-scale=1.0';
         document.getElementsByTagName('head')[0].appendChild(viewport);
         // Set Q-UA compatible prperty
         var equiv = document.createElement('meta');
         equiv.setAttribute('http-equiv', 'X-UA-Compatible');
-        equiv.href = 'IE=edge';
+        equiv.content = 'IE=edge';
         document.getElementsByTagName('head')[0].appendChild(equiv);
         // Comma metadata and links
         // --------------------------------------------------
