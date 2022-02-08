@@ -54,15 +54,11 @@ h2 {
     font-family: $heading;
 }
 
-header {
-    background-color: $accent;
-    height: 30%;
-    display: flex;
+nav {
+    background-color: black;
+    height: 75px;
+    display: fixed;
     justify-content: center;
-    align-items: center;
-    @media (min-width: 62em) {
-        height: 80%;
-    }
 }
 
 .mobile-hero {

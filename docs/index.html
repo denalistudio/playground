@@ -2,73 +2,112 @@
 <html lang="cs" translate="no">
 
 <head>
+    <meta charset="utf-8">
 </head>
 
 <script src="main.js"></script>
 
 <body>
-    <header>
-        <h1 style="color: white">Testing website</h1>
-    </header>
+    <nav>
+        <h1 style="color: white">Testing </h1>
+        <style>
+            .pushable {
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                margin-left: 880px;
+            }
+
+            .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: hsl(0deg 0% 0% / 0.25);
+                will-change: transform;
+                transform: translateY(2px);
+                transition:
+                    transform 600ms cubic-bezier(.3, .7, .4, 1);
+            }
+
+            .edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(to left,
+                        hsl(340deg 100% 16%) 0%,
+                        hsl(340deg 100% 32%) 8%,
+                        hsl(340deg 100% 32%) 92%,
+                        hsl(340deg 100% 16%) 100%);
+            }
+
+            .front {
+                display: block;
+                position: relative;
+                padding: 12px 42px;
+                border-radius: 12px;
+                font-size: 1.25rem;
+                color: white;
+                background: hsl(345deg 100% 47%);
+                will-change: transform;
+                transform: translateY(-4px);
+                transition:
+                    transform 600ms cubic-bezier(.3, .7, .4, 1);
+            }
+
+            .pushable:hover {
+                filter: brightness(110%);
+            }
+
+            .pushable:hover .front {
+                transform: translateY(-6px);
+                transition:
+                    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .pushable:active .front {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+            }
+
+            .pushable:hover .shadow {
+                transform: translateY(4px);
+                transition:
+                    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .pushable:active .shadow {
+                transform: translateY(1px);
+                transition: transform 34ms;
+            }
+
+            .pushable:focus:not(:focus-visible) {
+                outline: none;
+            }
+        </style>
+        <button class="pushable">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front">
+                Button
+            </span>
+        </button>
+    </nav>
     <main>
-        <div class="text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias fuga animi minima dolor autem? Error,
-                quibusdam mollitia dignissimos quaerat cum explicabo voluptas accusamus ullam, sint repellat qui,
-                laudantium
-                rerum tempora? Dicta ducimus architecto unde reprehenderit asperiores suscipit consectetur alias velit
-                est
-                saepe laudantium perspiciatis fuga sapiente adipisci consequatur vel esse possimus eaque ab, explicabo
-                inventore. Placeat nostrum amet vitae itaque eaque dolorum quos, ullam, id officia rerum tempora. Dolor
-                possimus accusantium, voluptates alias earum laboriosam! Quod quo sit explicabo debitis repellat quos
-                consequuntur nesciunt, illo voluptatem alias, fuga aspernatur id perspiciatis ab dolorem? Tempora
-                obcaecati
-                explicabo fugiat. Recusandae, dolor asperiores!</p>
-        </div>
-        <div class="divider"></div>
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <div class="img-1"></div>
-            <div class="img-2"></div>
-            <div class="img-3"></div>
-        </div>
-        <div class="divider"></div>
-        <div class="testimonials">
-            <h1>Řekli o nás</h1>
-            <div class="testimonial">
-                <h2>Jan Novák</h2>
-                <p><i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus modi aliquam eveniet autem ut
-                        in,
-                        nam doloremque, distinctio, quod quae pariatur. Assumenda ab explicabo aliquid exercitationem
-                        quo,
-                        dolorum architecto? Eum?</i></p>
-            </div>
-            <div class="testimonial">
-                <h2>Jan Novák</h2>
-                <p><i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus modi aliquam eveniet autem ut
-                        in,
-                        nam doloremque, distinctio, quod quae pariatur. Assumenda ab explicabo aliquid exercitationem
-                        quo,
-                        dolorum architecto? Eum?</i></p>
-            </div>
-            <div class="testimonial">
-                <h2>Jan Novák</h2>
-                <p><i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus modi aliquam eveniet autem ut
-                        in,
-                        nam doloremque, distinctio, quod quae pariatur. Assumenda ab explicabo aliquid exercitationem
-                        quo,
-                        dolorum architecto? Eum?</i></p>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="contact">
-            <h1>Kontaktujte nás</h1>
-            <p>+420 000 000 000</p>
-            <p>info@udimedoma.cz</p>
-            <p>example.com</p>
-        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatem enim id rerum nemo et eveniet!
+            Vitae pariatur tempore qui! Repudiandae aperiam earum qui eum expedita iste inventore velit facilis.</p>
     </main>
     <footer>
-        <p>&copy; 2022 Udíme doma</p>
+        <p>&copy; 2022 Test</p>
     </footer>
 </body>
 
