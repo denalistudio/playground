@@ -36,6 +36,8 @@ fetch('./comma.json')
             noindex.content = 'noindex';
             document.getElementsByTagName('head')[0].appendChild(noindex);
         }
+        var year = new Date().getFullYear()
+        document.getElementsByTagName('footer')[0].innerHTML = ('<p>©' + ' ' + year + ' ' + data.name + '</p>');;
     })
 
 function makeEditable() {
