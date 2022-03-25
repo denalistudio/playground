@@ -1,4 +1,8 @@
-
+const date = {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth() + 1,
+    day: new Date().getDate(),
+}
 
 fetch('./comma.json')
     .then(response => response.json())
@@ -38,8 +42,7 @@ fetch('./comma.json')
             noindex.content = 'noindex';
             document.getElementsByTagName('head')[0].appendChild(noindex);
         }
-        var year = new Date().getFullYear()
-        document.getElementsByTagName('footer')[0].innerHTML = ('<p>©' + ' ' + year + ' ' + data.name + '</p>');;
+        document.getElementsByTagName('footer')[0].innerHTML = ('<p>©' + ' ' + date.year + ' ' + data.name + '</p>');;
     })
 
 function makeEditable() {
