@@ -4,6 +4,10 @@ const date = {
     day: new Date().getDate(),
 }
 
+const dom = {
+    head: document.getElementsByTagName('head')[0],
+}
+
 fetch('./comma.json')
     .then(response => response.json())
     .then(data => {
@@ -14,7 +18,7 @@ fetch('./comma.json')
         var stylesheet = document.createElement('link');
         stylesheet.setAttribute('rel', 'stylesheet');
         stylesheet.href = data.files.style;
-        document.getElementsByTagName('head')[0].appendChild(stylesheet);
+        dom.head.appendChild(stylesheet);
         // Set the document description
         var description = document.createElement('meta');
         description.setAttribute('name', 'description');
