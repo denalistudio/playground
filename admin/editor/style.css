@@ -1,0 +1,44 @@
+#editor nav {
+  padding: 10px;
+  padding-left: 20%;
+  display: inline;
+  position: fixed;
+  background-color: white;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+#editor nav h1 {
+  width: 200px;
+}
+
+#editor #text {
+  margin: auto;
+  margin-top: 5%;
+  color: black;
+  background-color: white;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  padding: 40px;
+  width: 1000px;
+  height: 1400px;
+}
+
+#editor #text:focus {
+  outline: none;
+}
+
+#editor #counter {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background-color: white;
+  -webkit-box-shadow: black;
+          box-shadow: black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50px;
+}

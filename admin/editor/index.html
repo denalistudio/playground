@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Editor | Comma</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script id="settings" src="settings.json"></script>
+    <div id="editor">
+        <nav>
+            <div>
+                <button title="Bold (Ctrl+S)" onclick="format('**');"><b>B</b></button>
+                <button title="Italic (Ctrl+I)" onclick="format('*');"><i>I</i></button>
+                <button title="Underline" onclick="format('~');"><u>U</u></button>
+                <button title="Strikethrough" onclick="format('~~');"><s>S</s></button>
+                <button title="Code" onclick="format('```');"><code>C</code></button>
+            </div>
+        </nav>
+        <div autofocus contenteditable="true" id="text"></div>
+        <p id="counter">0</p>
+    </div>
+</body>
+
+</html>
