@@ -22,7 +22,7 @@ function load(id, url) {
     {
         if (xmlhttp.readyState == XMLHttpRequest.DONE ) 
         {
-           if(xmlhttp.status == 200){
+           if (xmlhttp.status == 200) {
                document.getElementById(id).innerHTML = xmlhttp.responseText;
                var allScripts = document.getElementById(id).getElementsByTagName('script');
                for (var n = 0; n < allScripts .length; n++)
@@ -31,7 +31,7 @@ function load(id, url) {
                }
            }
            else {
-               alert('Error');
+               console.error('Error loading ' + url + ': ' + xmlhttp.statusText);
            }
         }
     }
