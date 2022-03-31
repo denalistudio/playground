@@ -23,7 +23,7 @@
         "editor": {
             "version": 1.0,
             "source": null,
-            "options" : {
+            "options": {
                 "showDevTools": false,
                 "showHelp": false
             }

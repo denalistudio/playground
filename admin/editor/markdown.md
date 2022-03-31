@@ -60,8 +60,8 @@ Or without aligning the columns...
 
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
-| John | Doe | Male |
-| Mary | Smith | Female |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
 ```
  
 # Code
