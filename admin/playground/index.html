@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            flex-direction: column;
+            gap: 16px;
+            background: #000;
+        }
+
+        .output {
+            height: 150px;
+            width: 150px;
+            background: #b23737;
+        }
+
+        input {
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .result {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="output"></div>
+    <span class="result" style="color: #fff">0%</span>
+    <input class="input" type="range" min="0" max="50" value="0" />
+    <script>
+        let input = document.querySelector(".input");
+        let result = document.querySelector(".result");
+        let output = document.querySelector(".output");
+
+        input.addEventListener("input", function () {
+            result.innerText = input.value + "%";
+            output.style.borderRadius = input.value + "%";
+        });
+    </script>
+</body>
+
+</html>
