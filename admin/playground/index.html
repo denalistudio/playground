@@ -24,10 +24,12 @@
             background: #000;
         }
 
-        .output {
+        .container {
             height: 150px;
-            width: 150px;
+            width: 500px;
             background: #b23737;
+            resize: both;
+            overflow: auto;
         }
 
         input {
@@ -42,18 +44,24 @@
 </head>
 
 <body>
-    <div class="output"></div>
+    <div class="container"></div>
     <span class="result" style="color: #fff">0%</span>
     <input class="input" type="range" min="0" max="50" value="0" />
     <script>
         let input = document.querySelector(".input");
         let result = document.querySelector(".result");
-        let output = document.querySelector(".output");
+        let container = document.querySelector(".container");
 
         input.addEventListener("input", function () {
-            result.innerText = input.value + "%";
-            output.style.borderRadius = input.value + "%";
+            result.innerText = input.value + "px";
+            container.style.borderRadius = input.value + "px";
         });
+
+        function resizer() {
+            console.log(document.querySelector(".container").clientWidth + "x" + document.querySelector(".container").clientHeight);
+        }
+
+        new ResizeObserver(resizer).observe(container);
     </script>
 </body>
 
