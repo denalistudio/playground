@@ -13,6 +13,10 @@
             box-sizing: border-box;
         }
 
+        p{
+            color: white;
+        }
+
         body {
             height: 100vh;
             display: flex;
@@ -24,7 +28,7 @@
             background: #000;
         }
 
-        .container {
+        #rect {
             height: 150px;
             width: 500px;
             background: #b23737;
@@ -44,25 +48,9 @@
 </head>
 
 <body>
-    <div class="container"></div>
+    <div id="rect"></div>
     <span class="result" style="color: #fff">0%</span>
-    <input class="input" type="range" min="0" max="50" value="0" />
-    <script>
-        let input = document.querySelector(".input");
-        let result = document.querySelector(".result");
-        let container = document.querySelector(".container");
-
-        input.addEventListener("input", function () {
-            result.innerText = input.value + "px";
-            container.style.borderRadius = input.value + "px";
-        });
-
-        function resizer() {
-            console.log(document.querySelector(".container").clientWidth + "x" + document.querySelector(".container").clientHeight);
-        }
-
-        new ResizeObserver(resizer).observe(container);
-    </script>
+    <input class="input" type="range" min="0" max="50" value="0">
+    <p id="dimensions"></p>
+    <script src="./script.js"></script>
 </body>
-
-</html>
