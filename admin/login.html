@@ -17,11 +17,11 @@
 
         const regex = {
             email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
-        }
+        };
 
         function test() {
             result.innerHTML = regex.email.test(input.value);
-        }
+        };
 
         input.addEventListener('keyup', test);
     </script>
