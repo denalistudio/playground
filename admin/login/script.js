@@ -4,14 +4,11 @@ const login = {
     toggle: document.querySelectorAll("[data-login='toggle']")[0],
 }
 
-let result = document.getElementById('result');
-const togglePassword = document.getElementById('togglePassword');
-
 const regex = {
     email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
 };
 
-const testEmail = () => { console.log(regex.email.test(email.value)); };
+const test = () => { console.log(regex.email.test(email.value)); };
 
 const toggle = () => {
     if (login.password.type === 'password') {
@@ -23,6 +20,6 @@ const toggle = () => {
     }
 };
 
-login.email.addEventListener('keyup', testEmail);
+login.email.addEventListener('keyup', test);
 
 login.toggle.addEventListener("click", toggle);
