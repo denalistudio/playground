@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+$input: #f8f8f8;
+$green: #6ab16a;
+$green-hover: #428842;
+$grey: #808080;
+$grey-hover: #646464;
+
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+body {
+    display: block;
+    font-family: "Roboto", sans-serif;
+}
+main {
+    position: absolute;
+    margin: auto;
+    vertical-align: center;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input {
+    display: block;
+    width: 200px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: $input;
+    border: none;
+    border-radius: 5px;
+    &[type="email"],
+    &[type="password"] {
+        &:focus {
+            outline: 2px solid $green;
+        }
+    }
+    &[type="submit"] {
+        color: white;
+        background-color: $green;
+        width: 221px;
+        cursor: pointer;
+        &:hover {
+            background-color: $green-hover;
+        }
+    }
+}
+
+div {
+    position: relative;
+    span {
+        position: absolute;
+        right: -7.5px;
+        top: 6px;
+        font-size: 20px;
+        color: $grey;
+        user-select: none;
+        &:hover {
+            color: $grey-hover;
+        }
+    }
+}
+
+p {
+    font-size: 12px;
+    color: $grey;
+    a {
+        color: inherit;
+        &:hover {
+            color: $grey-hover;
+        }
+    }
+}
