@@ -1,43 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 body {
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
+  position: absolute;
   margin: auto;
+  vertical-align: center;
   width: 200px;
-  margin-top: 250px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 input {
   display: block;
-  font-family: 'Roboto', sans-serif;
   border-radius: 5px;
-  border: none;
   padding: 10px;
   margin-bottom: 15px;
+  border: none;
   background-color: #f8f8f8;
   width: 200px;
-  cursor: text;
 }
 
 input:focus {
   outline: 2px #6ab16a solid;
 }
 
-input[type=submit] {
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="submit"] {
   background-color: #6ab16a;
   color: white;
   width: 221px;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #428842;
-  cursor: pointer;
 }
 
-input[type=submit]:focus {
+input[type="submit"]:focus {
   outline: none;
 }
 
@@ -48,4 +59,30 @@ p {
 
 a {
   color: inherit;
+}
+
+a:hover {
+  color: #646464;
+}
+
+#pass {
+  position: relative;
+  width: 200px;
+}
+
+#togglePassword {
+  position: absolute;
+  right: -7.5px;
+  cursor: pointer;
+  top: 8.5px;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: grey;
+}
+
+#togglePassword:hover {
+  color: #646464;
 }

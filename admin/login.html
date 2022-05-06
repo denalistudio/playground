@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <main>
         <input type="email" data-login="email" placeholder="E-mail address">
         <p id="result"></p>
-        <input type="password" data-login="password" id="password" placeholder="Password">
+        <div id="pass">
+            <input type="password" data-login="password" id="password" placeholder="Password">
+            <span class="material-symbols-outlined" id="togglePassword">
+                visibility
+            </span>
+        </div>
         <input type="submit" value="Sign up">
-        <input type="checkbox" id="togglePassword"><br>
         <p>By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
     </main>
     <script>
@@ -27,7 +32,7 @@
         };
 
         function test() {
-            result.innerHTML = regex.email.test(email.value);
+            console.log(regex.email.test(email.value));
         };
 
         email.addEventListener('keyup', test);
@@ -38,12 +43,14 @@
             const password = document.getElementById('password');
             if (password.type === 'password') {
                 password.type = 'text';
+                togglePassword.innerHTML = 'visibility_off';
             } else {
                 password.type = 'password';
+                togglePassword.innerHTML = 'visibility';
             }
         };
 
-        togglePassword.addEventListener('change', showOrHidePassword);
+        togglePassword.addEventListener("click", showOrHidePassword);
     </script>
 </body>
 
