@@ -2,8 +2,12 @@
 body {
   display: block;
   font-family: 'Roboto', sans-serif;
-  margin: 150px;
+}
+
+main {
+  margin: auto;
   width: 200px;
+  margin-top: 250px;
 }
 
 input {
@@ -40,4 +44,8 @@ input[type=submit]:focus {
 p {
   color: grey;
   font-size: 12px;
+}
+
+a {
+  color: inherit;
 }
