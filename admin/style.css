@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: system, sans-serif;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80ch;
+  width: calc(100% - 4rem);
+}
+
+body {
+  margin: 0;
+  padding: 2rem 0;
+}
+
+textarea {
+  font: inherit;
+  height: 7rem;
+  width: 100%;
+  padding: .8rem 1rem;
+}
+
+.menu {
+  background-color: #f3f3f3;
+  position: absolute;
+  border-radius: 5px;
+  border: black solid 1px;
+}
+
+.menu-item {
+  cursor: default;
+  padding: 1rem;
+}
+
+.menu-item:first-child {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.menu-item:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.menu-item.selected {
+  background-color: slateGray;
+  color: white;
+}
+
+.menu-item:hover:not(.selected) {
+  background-color: #fafafa;
+}
