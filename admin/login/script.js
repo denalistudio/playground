@@ -1,27 +1,28 @@
-let email = document.querySelectorAll("[data-login='email']")[0];
-        let result = document.getElementById('result');
+const login = {
+    email: document.querySelectorAll("[data-login='email']")[0],
+    password: document.querySelectorAll("[data-login='password']")[0],
+    toggle: document.querySelectorAll("[data-login='toggle']")[0],
+}
 
-        const regex = {
-            email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
-        };
+let result = document.getElementById('result');
+const togglePassword = document.getElementById('togglePassword');
 
-        function test() {
-            console.log(regex.email.test(email.value));
-        };
+const regex = {
+    email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
+};
 
-        email.addEventListener('keyup', test);
+const testEmail = () => { console.log(regex.email.test(email.value)); };
 
-        const togglePassword = document.getElementById('togglePassword');
+const toggle = () => {
+    if (login.password.type === 'password') {
+        login.password.type = 'text';
+        login.toggle.innerHTML = 'visibility_off';
+    } else {
+        login.password.type = 'password';
+        login.toggle.innerHTML = 'visibility';
+    }
+};
 
-        const showOrHidePassword = () => {
-            const password = document.getElementById('password');
-            if (password.type === 'password') {
-                password.type = 'text';
-                togglePassword.innerHTML = 'visibility_off';
-            } else {
-                password.type = 'password';
-                togglePassword.innerHTML = 'visibility';
-            }
-        };
+login.email.addEventListener('keyup', testEmail);
 
-        togglePassword.addEventListener("click", showOrHidePassword);
+login.toggle.addEventListener("click", toggle);
