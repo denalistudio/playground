@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <input type="text" id="input">
+    <input type="email" data-login="email" placeholder="E-mail adress">
+    <input type="password" data-login="password" id="password" placeholder="Password">
+    <input type="submit" value="Log in">
     <p id="result"></p>
+    <input type="checkbox" id="togglePassword"><br>
+    <p>By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
     <script>
-        let input = document.getElementById('input');
+        let email = document.querySelectorAll("[data-login='email']")[0];
         let result = document.getElementById('result');
 
         const regex = {
@@ -20,10 +25,23 @@
         };
 
         function test() {
-            result.innerHTML = regex.email.test(input.value);
+            result.innerHTML = regex.email.test(email.value);
         };
 
-        input.addEventListener('keyup', test);
+        email.addEventListener('keyup', test);
+
+        const togglePassword = document.getElementById('togglePassword');
+
+        const showOrHidePassword = () => {
+            const password = document.getElementById('password');
+            if (password.type === 'password') {
+                password.type = 'text';
+            } else {
+                password.type = 'password';
+            }
+        };
+
+        togglePassword.addEventListener('change', showOrHidePassword);
     </script>
 </body>
 

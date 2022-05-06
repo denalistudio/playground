@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -51,8 +51,8 @@ nav {
   height: 75px;
   display: fixed;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .mobile-hero {
@@ -137,17 +137,17 @@ main {
   display: grid;
   gap: 1em;
   -ms-grid-rows: 3fr;
-  grid-template-rows: 3fr;
-  -ms-grid-columns: (1fr) [1];
-  grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 3fr;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
 }
 
 @media (min-width: 36em) {
   .gallery {
     -ms-grid-rows: 1fr;
-    grid-template-rows: 1fr;
-    -ms-grid-columns: (1fr) [3];
-    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -201,7 +201,7 @@ footer p {
 
 #cookies {
   -webkit-box-shadow: #959da533 0 0.5em 1.5em;
-  box-shadow: #959da533 0 0.5em 1.5em;
+          box-shadow: #959da533 0 0.5em 1.5em;
   padding: 15px;
   border-radius: 10px;
   background-color: white;
@@ -210,7 +210,7 @@ footer p {
 @media (prefers-color-scheme: dark) {
   #cookies {
     -webkit-box-shadow: #00000033 0 0.5em 1.5em;
-    box-shadow: #00000033 0 0.5em 1.5em;
+            box-shadow: #00000033 0 0.5em 1.5em;
   }
 }
 
