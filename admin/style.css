@@ -33,6 +33,12 @@ textarea {
   height: 7rem;
   width: 100%;
   padding: .8rem 1rem;
+  border-radius: 5px;
+  border: 1px #808080 solid;
+}
+
+textarea:focus {
+  outline: 2px solid #6ab16a;
 }
 
 .menu {

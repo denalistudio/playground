@@ -37,7 +37,12 @@ textarea {
     font: inherit;
     height: 7rem;
     width: 100%;
-    padding: .8rem 1rem
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    border: 1px $grey solid;
+    &:focus {
+        outline: 2px solid $green;
+    }
 }
 
 .menu {
