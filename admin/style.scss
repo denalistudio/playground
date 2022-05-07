@@ -39,7 +39,9 @@ textarea {
     width: 100%;
     padding: .8rem 1rem;
     border-radius: 5px;
-    border: 1px $grey solid;
+    border: none;
+    background-color: $input;
+    resize: none;
     &:focus {
         outline: 2px solid $green;
     }
@@ -66,7 +68,7 @@ textarea {
 }
 
 .menu-item.selected {
-    background-color: slateGray;
+    background-color: $green;
     color: white;
 }
 

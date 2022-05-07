@@ -8,7 +8,7 @@ const regex = {
     email: /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/,
 };
 
-const test = () => { console.log(regex.email.test(email.value)); };
+const test = () => { console.log(regex.email.test(login.email.value)); };
 
 const toggle = () => {
     if (login.password.type === 'password') {

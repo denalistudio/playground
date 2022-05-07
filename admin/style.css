@@ -34,7 +34,9 @@ textarea {
   width: 100%;
   padding: .8rem 1rem;
   border-radius: 5px;
-  border: 1px #808080 solid;
+  border: none;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
 textarea:focus {
@@ -62,7 +64,7 @@ textarea:focus {
 }
 
 .menu-item.selected {
-  background-color: slateGray;
+  background-color: #6ab16a;
   color: white;
 }
 
