@@ -5,14 +5,16 @@
 }
 
 :root {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: system, sans-serif;
 }
 
 *,
 ::before,
 ::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -138,9 +140,11 @@ textarea:focus {
 }
 
 #search div a {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 9fr;
-  grid-template-areas: "icon title";
+  -ms-grid-columns: 1fr 9fr;
+      grid-template-columns: 1fr 9fr;
+      grid-template-areas: "icon title";
   background-color: #f8f8f8;
   text-decoration: none;
 }
@@ -150,14 +154,24 @@ textarea:focus {
 }
 
 #search div a span {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: icon;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: gray;
 }
 
 #search div a p {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: title;
   color: gray;
 }

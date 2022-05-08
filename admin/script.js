@@ -1,27 +1,31 @@
 const spotlight = {
     element: document.querySelector("[data-comma='spotlight']"),
-    show: () => {
-        if (spotlight.element.style.display === 'none') {
-            spotlight.element.style = 'display: block';
-        } else {
-            spotlight.element.style = 'display: none';
+    show: (option) => {
+        switch (option) {
+            case 'on':
+                spotlight.element.style = 'display: block';
+                break;
+            case 'off':
+                spotlight.element.style = 'display: none';
+                break;
         }
     }
 }
 
 const search = {
-    element: document.getElementById('search'),
+    element: document.querySelector("[data-search='element']"),
     input: document.querySelector("[data-search='input']"),
     results: document.querySelector("[data-search='results']"),
     show: () => {
         if (search.element.style.display === 'none') {
             search.element.style = 'display: block'
-            spotlight.show();
+            search.input.value = "";
+            spotlight.show('on');
             search.input.focus();
         }
         else {
             search.element.style = 'display: none'
-            spotlight.show();
+            spotlight.show('off');
         };
     },
     filter: () => {
@@ -48,7 +52,7 @@ onkeydown = function (e) {
 
 search.input.addEventListener('keyup', search.filter);
 
-document.querySelector("[data-comma='spotlight']").addEventListener('click', search.show)
+spotlight.element.addEventListener('click', search.show);
 
 const properties = [
     'direction',
