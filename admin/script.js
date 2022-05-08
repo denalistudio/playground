@@ -10,17 +10,17 @@ const spotlight = {
 }
 
 const search = {
-    div: document.getElementById('search'),
+    element: document.getElementById('search'),
     input: document.querySelector("[data-search='input']"),
     results: document.querySelector("[data-search='results']"),
     show: () => {
-        if (search.div.style.display === 'none') {
-            search.div.style = 'display: block'
+        if (search.element.style.display === 'none') {
+            search.element.style = 'display: block'
             spotlight.show();
             search.input.focus();
         }
         else {
-            search.div.style = 'display: none'
+            search.element.style = 'display: none'
             spotlight.show();
         };
     },
