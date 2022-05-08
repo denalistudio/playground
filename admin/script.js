@@ -1,9 +1,11 @@
 const spotlight = {
-    on: () => {
-        document.querySelector("[data-comma='spotlight']").style = 'display: block'
-    },
-    off: () => {
-        document.querySelector("[data-comma='spotlight']").style = 'display: none'
+    element: document.querySelector("[data-comma='spotlight']"),
+    show: () => {
+        if (spotlight.element.style.display === 'none') {
+            spotlight.element.style = 'display: block';
+        } else {
+            spotlight.element.style = 'display: none';
+        }
     }
 }
 
@@ -14,12 +16,12 @@ const search = {
     show: () => {
         if (search.div.style.display === 'none') {
             search.div.style = 'display: block'
-            spotlight.on();
+            spotlight.show();
             search.input.focus();
         }
         else {
             search.div.style = 'display: none'
-            spotlight.off();
+            spotlight.show();
         };
     },
     filter: () => {
