@@ -46,6 +46,8 @@ onkeydown = function (e) {
 
 search.input.addEventListener('keyup', search.filter);
 
+document.querySelector("[data-comma='spotlight']").addEventListener('click', search.show)
+
 const properties = [
     'direction',
     'boxSizing',
