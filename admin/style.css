@@ -191,3 +191,9 @@ textarea:focus {
   background-color: rgba(0, 0, 0, 0.25);
   z-index: 5;
 }
+
+.key {
+  padding: 2px 3px;
+  outline: #428842 solid 1px;
+  border-radius: 5px;
+}

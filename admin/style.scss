@@ -161,6 +161,12 @@ textarea {
     height: 100%;
     top: 0;
     display: none;
-    background-color: rgba(0,0,0, 0.25);;
+    background-color: rgba(0, 0, 0, 0.25);
     z-index: 5;
+}
+
+.key {
+    padding: 2px 3px;
+    outline: #428842 solid 1px;
+    border-radius: 5px;
 }
