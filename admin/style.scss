@@ -165,11 +165,6 @@ textarea {
     z-index: 5;
 }
 
-#keys {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-
     kbd {
         padding: 2px 4px;
         font-size: 12px;
@@ -178,4 +173,3 @@ textarea {
         border-radius: 5px;
         background-color: $input;
     }    
-}
