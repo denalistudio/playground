@@ -22,15 +22,14 @@ $grey-hover: #646464;
     box-sizing: inherit;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 80ch;
-    width: calc(100% - 4rem);
-}
-
 body {
     margin: 0;
     padding: 2rem 0;
+}
+
+main {
+    margin: auto;
+    width: 40%;
 }
 
 textarea {
@@ -108,9 +107,8 @@ textarea {
 #search {
     position: absolute;
     margin: auto;
-    vertical-align: center;
+    margin-top: 20%;
     width: 500px;
-    height: 100px;
     top: 0;
     bottom: 0;
     left: 0;
