@@ -66,9 +66,11 @@ onkeydown = function (e) {
         search.show();
     }
     if (e.ctrlKey && e.keyCode == 66) {
+        e.preventDefault();
         editor.format('**');
     }
     if (e.ctrlKey && e.keyCode == 73) {
+        e.preventDefault();
         editor.format('*');
     }
 };
