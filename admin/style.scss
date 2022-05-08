@@ -181,3 +181,20 @@ kbd {
         outline: 2px solid $green;
     }
 }
+
+.toolbar {
+    background-color: $input;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 5px 7.5px;
+    button {
+        border: none;
+        background-color: none;
+        border-radius: 2.5px;
+        font-size: 24px;
+        &:hover {
+            background-color: $green;
+            color: white;
+        }
+    }
+}

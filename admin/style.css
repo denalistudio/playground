@@ -209,3 +209,22 @@ kbd {
 #editor:focus {
   outline: 2px solid #6ab16a;
 }
+
+.toolbar {
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px 7.5px;
+}
+
+.toolbar button {
+  border: none;
+  background-color: none;
+  border-radius: 2.5px;
+  font-size: 24px;
+}
+
+.toolbar button:hover {
+  background-color: #6ab16a;
+  color: white;
+}

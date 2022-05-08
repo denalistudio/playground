@@ -18,9 +18,13 @@
         </div>
         <h2>Search</h2>
         <p>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open search.</p>
-        <button id="bold">B</button>
-        <div contenteditable="true" id="editor">Lorem ipsum dolor</div>
+        <h2>Editor</h2>
+        <div class="toolbar">
+            <button id="bold"><strong>B</strong></button>
+        </div>
+        <div contenteditable="true" id="editor" onkeyup="editor.output()">Lorem ipsum dolor</div>
         <p>Press <kbd>Ctrl</kbd> + <kbd>B</kbd> for bold text and <kbd>Ctlr</kbd> + <kbd>I</kbd> for italic.</p>
+        <p id="text"></p>
     </main>
     <div data-search="element" id="search" style="display: none;">
         <input type="text" id="myInput" data-search="input" placeholder="Search or type '/' for commands">
