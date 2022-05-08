@@ -47,12 +47,12 @@ const editor = {
     format: (type) => {
         var sel = window.getSelection();
         var range = sel.getRangeAt(0);
-    
+
         var range0 = range.cloneRange();
-    
+
         range.collapse(true);
         document.execCommand('insertText', false, type);
-    
+
         sel.removeAllRanges();
         sel.addRange(range0);
         range0.collapse(false);
@@ -61,17 +61,21 @@ const editor = {
 }
 
 onkeydown = function (e) {
-    if (e.ctrlKey && e.keyCode == 'K'.charCodeAt(0)) {
-        e.preventDefault();
-        search.show();
-    }
-    if (e.ctrlKey && e.keyCode == 66) {
-        e.preventDefault();
-        editor.format('**');
-    }
-    if (e.ctrlKey && e.keyCode == 73) {
-        e.preventDefault();
-        editor.format('*');
+    if (e.ctrlKey) {
+        switch (e.keyCode) {
+            case 75:
+                e.preventDefault();
+                search.show();
+                break;
+            case 66:
+                e.preventDefault();
+                editor.format('**');
+                break;
+            case 73:
+                e.preventDefault();
+                editor.format('*');
+                break;
+        }
     }
 };
 
