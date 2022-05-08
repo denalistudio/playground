@@ -43,16 +43,41 @@ const search = {
     }
 };
 
+const editor = {
+    format: (type) => {
+        var sel = window.getSelection();
+        var range = sel.getRangeAt(0);
+    
+        var range0 = range.cloneRange();
+    
+        range.collapse(true);
+        document.execCommand('insertText', false, type);
+    
+        sel.removeAllRanges();
+        sel.addRange(range0);
+        range0.collapse(false);
+        document.execCommand('insertText', false, type);
+    }
+}
+
 onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'K'.charCodeAt(0)) {
         e.preventDefault();
         search.show();
+    }
+    if (e.ctrlKey && e.keyCode == 66) {
+        editor.format('**');
+    }
+    if (e.ctrlKey && e.keyCode == 73) {
+        editor.format('*');
     }
 };
 
 search.input.addEventListener('keyup', search.filter);
 
 spotlight.element.addEventListener('click', search.show);
+
+document.getElementById('bold').addEventListener('click', () => editor.format('**'));
 
 const properties = [
     'direction',

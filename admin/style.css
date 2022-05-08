@@ -199,3 +199,13 @@ kbd {
   border-radius: 5px;
   background-color: #f8f8f8;
 }
+
+#editor {
+  background-color: #f8f8f8;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+}
+
+#editor:focus {
+  outline: 2px solid #6ab16a;
+}

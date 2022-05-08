@@ -172,3 +172,12 @@ kbd {
     border-radius: 5px;
     background-color: $input;
 }
+
+#editor {
+    background-color: $input;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    &:focus {
+        outline: 2px solid $green;
+    }
+}
