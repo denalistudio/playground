@@ -23,15 +23,14 @@ onkeydown = function (e) {
 function myFunction() {
     // Declare variables
     var filter, ul, li, a, i, txtValue;
-    filter = search.input.value.toUpperCase();
     ul = document.getElementById("myUL");
-    a = ul.getElementsByTagName('a');
+    a = search.results.getElementsByTagName('a');
 
     // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
+    for (i = 0; i < a.length; i++) {
         p = a[i].getElementsByTagName("p")[0];
         txtValue = p.textContent || p.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(search.input.value.toUpperCase()) > -1) {
             a[i].style.display = "";
         } else {
             a[i].style.display = "none";
