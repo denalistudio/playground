@@ -180,6 +180,7 @@ textarea:focus {
 
 #keys {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
