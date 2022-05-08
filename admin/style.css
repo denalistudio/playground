@@ -180,7 +180,7 @@ textarea:focus {
   border-radius: 0px 0px 5px 5px;
 }
 
-#searchBG {
+[data-comma="spotlight"] {
   position: fixed;
   margin: auto;
   vertical-align: center;

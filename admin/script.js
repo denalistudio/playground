@@ -1,18 +1,26 @@
+const spotlight = {
+    on: () => {
+        document.querySelector("[data-comma='spotlight']").style = 'display: block'
+    },
+    off: () => {
+        document.querySelector("[data-comma='spotlight']").style = 'display: none'
+    }
+}
+
 const search = {
     div: document.getElementById('search'),
     input: document.querySelector("[data-search='input']"),
     results: document.querySelector("[data-search='results']"),
-    background: document.getElementById('searchBG'),
     show: () => {
         if (search.div.style.display === 'none') {
             search.div.style = 'display: block'
-            search.background.style = 'display: block'
+            spotlight.on();
             search.input.focus();
         }
         else {
             search.div.style = 'display: none'
-            search.background.style = 'display: none'
-        }
+            spotlight.off();
+        };
     },
     filter: () => {
         var a, i, txtValue;
