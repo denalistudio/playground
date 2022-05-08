@@ -1,13 +1,42 @@
+const search = {
+    div: document.getElementById('search'),
+    input: document.querySelector("[data-search='input']"),
+    results: document.querySelector("[data-search='results']"),
+    show: () => {
+        if (search.div.style.display === 'none') {
+            search.div.style = 'display: block'
+            search.input.focus();
+        }
+        else {
+            search.div.style = 'display: none'
+        }
+    },
+};
+
 onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'K'.charCodeAt(0)) {
         e.preventDefault();
-        search();
+        search.show();
     }
-}
+};
 
-function search() {
-    alert("Shotcut Pressed")
-    
+function myFunction() {
+    // Declare variables
+    var filter, ul, li, a, i, txtValue;
+    filter = search.input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    a = ul.getElementsByTagName('a');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        p = a[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
 }
 
 const properties = [

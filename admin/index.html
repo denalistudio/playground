@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Comma</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <main>
         <div class="container">
@@ -14,6 +16,15 @@
             <div id="menu" class="menu" role="listbox"></div>
         </div>
     </main>
+    <div id="search" style="display: none;">
+        <input type="text" id="myInput" data-search="input" onkeyup="myFunction()" placeholder="Search for names..">
+        <div data-search="results">
+            <a href="#"><span class="material-symbols-outlined">post_add</span><p>Create a new post</p></a>
+            <a href="#"><span class="material-symbols-outlined">post_add</span><p>bices</p></a>
+            <a href="#"><span class="material-symbols-outlined">post_add</span><p>pax</p></a>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
