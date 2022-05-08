@@ -1,3 +1,15 @@
+onkeydown = function (e) {
+    if (e.ctrlKey && e.keyCode == 'K'.charCodeAt(0)) {
+        e.preventDefault();
+        search();
+    }
+}
+
+function search() {
+    alert("Shotcut Pressed")
+    
+}
+
 const properties = [
     'direction',
     'boxSizing',
@@ -222,7 +234,7 @@ class Mentionify {
 const users = [
     { username: 'davidbrzy' },
     { username: 'jakubklapka' },
-    { username: 'johndoe'},
+    { username: 'johndoe' },
 ]
 
 const resolveFn = prefix => prefix === ''
