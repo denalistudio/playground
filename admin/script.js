@@ -2,15 +2,31 @@ const search = {
     div: document.getElementById('search'),
     input: document.querySelector("[data-search='input']"),
     results: document.querySelector("[data-search='results']"),
+    background: document.getElementById('searchBG'),
     show: () => {
         if (search.div.style.display === 'none') {
             search.div.style = 'display: block'
+            search.background.style = 'display: block'
             search.input.focus();
         }
         else {
             search.div.style = 'display: none'
+            search.background.style = 'display: none'
         }
     },
+    filter: () => {
+        var a, i, txtValue;
+        a = search.results.getElementsByTagName('a');
+        for (i = 0; i < a.length; i++) {
+            p = a[i].getElementsByTagName("p")[0];
+            txtValue = p.textContent || p.innerText;
+            if (txtValue.toUpperCase().indexOf(search.input.value.toUpperCase()) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+        }
+    }
 };
 
 onkeydown = function (e) {
@@ -20,23 +36,7 @@ onkeydown = function (e) {
     }
 };
 
-function myFunction() {
-    // Declare variables
-    var filter, ul, li, a, i, txtValue;
-    ul = document.getElementById("myUL");
-    a = search.results.getElementsByTagName('a');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < a.length; i++) {
-        p = a[i].getElementsByTagName("p")[0];
-        txtValue = p.textContent || p.innerText;
-        if (txtValue.toUpperCase().indexOf(search.input.value.toUpperCase()) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-}
+search.input.addEventListener('keyup', search.filter);
 
 const properties = [
     'direction',
