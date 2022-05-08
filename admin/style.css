@@ -193,7 +193,10 @@ textarea:focus {
 }
 
 .key {
-  padding: 2px 3px;
-  outline: #428842 solid 1px;
+  padding: 2px 4px;
+  font-size: 12px;
+  outline: #bdbdbd solid 1px;
+  color: #646464;
   border-radius: 5px;
+  background-color: #f8f8f8;
 }

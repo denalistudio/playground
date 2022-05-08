@@ -166,7 +166,10 @@ textarea {
 }
 
 .key {
-    padding: 2px 3px;
-    outline: #428842 solid 1px;
+    padding: 2px 4px;
+    font-size: 12px;
+    outline: rgb(189, 189, 189) solid 1px;
+    color: rgb(100, 100, 100);
     border-radius: 5px;
+    background-color: $input;
 }
