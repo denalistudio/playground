@@ -10,7 +10,7 @@ const spotlight = {
                 break;
         }
     }
-}
+};
 
 const search = {
     element: document.querySelector("[data-search='element']"),
@@ -79,8 +79,26 @@ const editor = {
     output: () => {
         var input = document.getElementById("editor").innerHTML;
         document.getElementById("text").innerHTML = editor.syntax(input);
+    },
+    save: () => {
+        var textFileAsBlob = new Blob([document.getElementById("editor").innerHTML], { type: "text/plain" });
+        var downloadLink = document.createElement("a");
+        downloadLink.download = 'download.md';
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null) {
+            // Chrome
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        } else {
+            // Firefox
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+    
+        downloadLink.click();
     }
-}
+};
 
 onkeydown = function (e) {
     if (e.ctrlKey) {

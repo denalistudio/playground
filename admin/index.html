@@ -21,10 +21,10 @@
         <h2>Editor</h2>
         <div class="toolbar">
             <button id="bold"><strong>B</strong></button>
+            <button onclick="editor.save()">Save</button>
         </div>
-        <div contenteditable="true" id="editor" onkeyup="editor.output()" style="display: inline-block;">Lorem ipsum dolor</div>
+        <div contenteditable="true" id="editor">Lorem ipsum dolor</div>
         <p>Press <kbd>Ctrl</kbd> + <kbd>B</kbd> for bold text and <kbd>Ctlr</kbd> + <kbd>I</kbd> for italic.</p>
-        <p id="text"></p>
     </main>
     <div data-search="element" id="search" style="display: none;">
         <input type="text" id="myInput" data-search="input" placeholder="Search or type '/' for commands">
