@@ -56,7 +56,10 @@ div span {
   top: 6px;
   font-size: 20px;
   color: #808080;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 
