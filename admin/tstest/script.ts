@@ -9,3 +9,7 @@ interface abc {
 interface Window {
     state: 0 | 1 | 2 | 'e'; // Our window state management system supports four states. 0: closed, 1: loading, 2: loaded, e: error
 }
+
+function mojemama() {
+    console.log('mojemama');
+}
