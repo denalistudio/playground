@@ -1,6 +1,6 @@
 const spotlight = {
-    element: document.querySelector("[data-comma='spotlight']"),
-    show: (option) => {
+    element: <HTMLDivElement>document.querySelector("[data-comma='spotlight']"),
+    show: (option: 'on' | 'off') => {
         switch (option) {
             case 'on':
                 spotlight.element.style = 'display: block';
