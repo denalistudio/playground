@@ -378,3 +378,4 @@ new Mentionify(
     replaceFn,
     menuItemFn
 )
+
