@@ -14,7 +14,7 @@
         }
 
         p {
-            color: white;
+            color: rgb(0, 0, 0);
         }
 
         body {
@@ -25,7 +25,7 @@
             font-family: sans-serif;
             flex-direction: column;
             gap: 16px;
-            background: #000;
+            background: rgb(255, 255, 255);
         }
 
         #rect {
@@ -49,14 +49,14 @@
 
 <body>
     <div id="rect"></div>
-    <span id="output-borderRadius" style="color: #fff">0%</span>
+    <h3>Border radius</h3>
+    <p labels="radius">0%</p>
     <input class="input" type="range" min="0" max="50" value="0">
+    <h3>Dimensions</h3>
     <p labels="dimensions"></p>
-    <section class="parent">
-        <h3>Random Hex Generator</h3>
-        <span labels="color" style="color: white">#ffffff</span>
+    <h3>Color</h3>
+        <p labels="color">#ffffff</p>
         <button class="btn" onclick="design.color.random()">Random Color</button>
-    </section>
 
     <script src="./script.js"></script>
 </body>
