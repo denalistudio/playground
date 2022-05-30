@@ -2,6 +2,13 @@ const element = document.getElementById("rect");
 
 const labels = {
     color: document.querySelector("[labels='color']"),
+    dimensions: document.querySelector("[labels='color']"),
+
+    update: {
+        dimensions: () => {
+            output.dimensions.innerHTML = element.clientWidth + "px" + " x " + element.clientHeight + "px";
+        },
+    },
 }
 
 const design = {
@@ -30,12 +37,7 @@ input.addEventListener("input", function () {
     element.style.borderRadius = input.value + "px";
 });
 
-function resizer() {
-    output.dimensions.innerHTML = element.clientWidth + "px" + " x " + element.clientHeight + "px";
-}
+new ResizeObserver(labels.update.dimensions).observe(element);
 
-new ResizeObserver(resizer).observe(element);
-
-let hexColor = document.querySelector(".result")
 let btn = document.querySelector(".btn")
 
