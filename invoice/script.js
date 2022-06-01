@@ -13,7 +13,6 @@ const invoice = {
     type: document.querySelectorAll("[data-invoice='type']")[0],
     due: document.querySelectorAll("[data-invoice='due']")[0],
     issue: document.querySelectorAll("[data-invoice='issue']")[0],
-    tax: document.querySelectorAll("[data-invoice='tax']")[0],
     supplier: {
       name: document.querySelectorAll("[data-invoice='supplier-name']")[0],
       address1: document.querySelectorAll("[data-invoice='supplier-address1']")[0],
@@ -60,7 +59,6 @@ const invoice = {
 function init() {
   var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
   invoice.output.issue.innerHTML = today;
-  invoice.output.tax.innerHTML = today;
 
   invoice.output.buyer.name.setAttribute("contenteditable", true);
   invoice.output.buyer.address1.setAttribute("contenteditable", true);
