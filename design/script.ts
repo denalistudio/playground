@@ -33,8 +33,6 @@ const design = {
     }
 }
 
-
-
 const output = {
     borderRadius: document.getElementById("output-borderRadius"),
     dimensions: document.getElementById("output-dimensions"),

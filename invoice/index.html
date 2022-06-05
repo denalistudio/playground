@@ -10,7 +10,7 @@
 <body>
     <aside id="input">
         <h1>Faktura</h1>
-        <input class="number" type="number" placeholder="Číslo faktury" data-input="number"
+        <input class="number" id="aside-number" type="number" placeholder="#" title="Číslo faktury" data-input="number"
             onkeyup="invoice.make('number')">
         <input class="due" type="date" placeholder="Due date" oninput="invoice.make('due')">
         <div class="switch">

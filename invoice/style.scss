@@ -125,7 +125,7 @@ button {
     }
   }
 
-  input:checked+label {
+  input:checked + label {
     background-color: #77b377;
     color: white;
 
@@ -223,4 +223,14 @@ input:focus {
 .column30 {
   float: left;
   width: 30%;
+}
+
+#aside-number {
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
 }
