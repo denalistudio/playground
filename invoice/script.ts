@@ -1,6 +1,6 @@
 const date = new Date();
 
-const invoice = {
+const dom = {
   input: {
     number: <HTMLInputElement>document.querySelector("[data-input='number']"),
     due: <HTMLInputElement>document.querySelectorAll("#input > .due")[0]
@@ -29,12 +29,12 @@ const invoice = {
   make: (what: "number" | "due" | "type", argument: "bank" | "cash") => {
     switch (what) {
       case "number":
-        let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + invoice.input.number.value).slice(-4);
-        invoice.output.number.innerHTML = "Faktura" + " " + number;
-        invoice.output.variable.innerHTML = number;
+        let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
+        dom.output.number.innerHTML = "Faktura" + " " + number;
+        dom.output.variable.innerHTML = number;
         break;
       case "due":
-        invoice.output.due.innerHTML = invoice.input.due.value;
+        dom.output.due.innerHTML = dom.input.due.value;
         break;
       case "type":
         switch (argument) {
@@ -42,13 +42,13 @@ const invoice = {
             document.querySelectorAll(".bank").forEach(el => {
               el.style.display = "block";
             });
-            invoice.output.type.innerHTML = "bankovním převodem";
+            dom.output.type.innerHTML = "bankovním převodem";
             break;
           case "cash":
             document.querySelectorAll(".bank").forEach(el => {
               el.style.display = "none";
             });
-            invoice.output.type.innerHTML = "hotově";
+            dom.output.type.innerHTML = "hotově";
             break;
         }
         break;
@@ -58,23 +58,23 @@ const invoice = {
 
 function init() {
   var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-  invoice.output.issue.innerHTML = today;
+  dom.output.issue.innerHTML = today;
 
-  invoice.output.buyer.name.setAttribute("contenteditable", true);
-  invoice.output.buyer.address1.setAttribute("contenteditable", true);
-  invoice.output.buyer.address2.setAttribute("contenteditable", true);
-  invoice.output.buyer.ico.setAttribute("contenteditable", true);
+  dom.output.buyer.name.setAttribute("contenteditable", true);
+  dom.output.buyer.address1.setAttribute("contenteditable", true);
+  dom.output.buyer.address2.setAttribute("contenteditable", true);
+  dom.output.buyer.ico.setAttribute("contenteditable", true);
 }
 
 function make(what, argument) {
   switch (what) {
     case "number":
-      let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + invoice.input.number.value).slice(-4);
-      invoice.output.number.innerHTML = "Faktura" + " " + number;
-      invoice.output.variable.innerHTML = number;
+      let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
+      dom.output.number.innerHTML = "Faktura" + " " + number;
+      dom.output.variable.innerHTML = number;
       break;
     case "due":
-      invoice.output.due.innerHTML = invoice.input.due.value;
+      dom.output.due.innerHTML = dom.input.due.value;
       break;
     case "type":
       switch (argument) {
@@ -82,13 +82,13 @@ function make(what, argument) {
           document.querySelectorAll(".bank").forEach(el => {
             el.style.display = "block";
           });
-          invoice.output.type.innerHTML = "bankovním převodem";
+          dom.output.type.innerHTML = "bankovním převodem";
           break;
         case "cash":
           document.querySelectorAll(".bank").forEach(el => {
             el.style.display = "none";
           });
-          invoice.output.type.innerHTML = "hotově";
+          dom.output.type.innerHTML = "hotově";
           break;
       }
       break;
@@ -97,17 +97,17 @@ function make(what, argument) {
 
 document.addEventListener("DOMContentLoaded", init);
 
-invoice.input.number.addEventListener("input", make("number"));
+dom.input.number.addEventListener("input", make("number"));
 
 fetch('./info.json')
   .then(response => response.json())
   .then(data => {
-    invoice.output.heading.innerHTML = data.heading;
-    invoice.output.supplier.name.innerHTML = data.name;
-    invoice.output.supplier.address1.innerHTML = data.address1;
-    invoice.output.supplier.address2.innerHTML = data.address2;
-    invoice.output.supplier.ico.innerHTML = data.ico;
-    invoice.output.bank.innerHTML = data.bank;
+    dom.output.heading.innerHTML = data.heading;
+    dom.output.supplier.name.innerHTML = data.name;
+    dom.output.supplier.address1.innerHTML = data.address1;
+    dom.output.supplier.address2.innerHTML = data.address2;
+    dom.output.supplier.ico.innerHTML = data.ico;
+    dom.output.bank.innerHTML = data.bank;
   })
   .catch(error => console.error(error));
 
