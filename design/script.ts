@@ -17,6 +17,8 @@ const labels = {
     },
 }
 
+// TODO: Better function and lateral control
+
 const design = {
     color: {
         random: () => {
