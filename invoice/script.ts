@@ -2,7 +2,7 @@ const date = new Date();
 
 const dom = {
   input: {
-    number: <HTMLInputElement>document.querySelector("[data-input='number']"),
+    number: <HTMLInputElement>document.querySelectorAll("[data-input='number']")[0],
     due: <HTMLInputElement>document.querySelectorAll("#input > .due")[0]
   },
   output: {
@@ -26,7 +26,10 @@ const dom = {
       ico: <HTMLElement>document.querySelectorAll("[data-invoice='buyer-ico']")[0]
     }
   },
-  make: (what: "number" | "due" | "type", argument: "bank" | "cash") => {
+}
+
+const invoice = {
+  make: (what: "number" | "due" | "type" | "bank" | "cash") => {
     switch (what) {
       case "number":
         let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
@@ -36,23 +39,44 @@ const dom = {
       case "due":
         dom.output.due.innerHTML = dom.input.due.value;
         break;
-      case "type":
-        switch (argument) {
-          case "bank":
-            document.querySelectorAll(".bank").forEach(el => {
-              el.style.display = "block";
-            });
-            dom.output.type.innerHTML = "bankovním převodem";
-            break;
-          case "cash":
-            document.querySelectorAll(".bank").forEach(el => {
-              el.style.display = "none";
-            });
-            dom.output.type.innerHTML = "hotově";
-            break;
-        }
-        break;
+        case "bank":
+          document.querySelectorAll(".bank").forEach(el => {
+            el.style.display = "block";
+          });
+          dom.output.type.innerHTML = "bankovním převodem";
+          break;
+        case "cash":
+          document.querySelectorAll(".bank").forEach(el => {
+            el.style.display = "none";
+          });
+          dom.output.type.innerHTML = "hotově";
+          break;
     }
+  }
+}
+
+function make(what: "number" | "due" | "type" | "bank" | "cash") {
+  switch (what) {
+    case "number":
+      let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
+      dom.output.number.innerHTML = "Faktura" + " " + number;
+      dom.output.variable.innerHTML = number;
+      break;
+    case "due":
+      dom.output.due.innerHTML = dom.input.due.value;
+      break;
+      case "bank":
+        document.querySelectorAll(".bank").forEach(el => {
+          el.style.display = "block";
+        });
+        dom.output.type.innerHTML = "bankovním převodem";
+        break;
+      case "cash":
+        document.querySelectorAll(".bank").forEach(el => {
+          el.style.display = "none";
+        });
+        dom.output.type.innerHTML = "hotově";
+        break;
   }
 }
 
@@ -66,38 +90,7 @@ function init() {
   dom.output.buyer.ico.setAttribute("contenteditable", true);
 }
 
-function make(what, argument) {
-  switch (what) {
-    case "number":
-      let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
-      dom.output.number.innerHTML = "Faktura" + " " + number;
-      dom.output.variable.innerHTML = number;
-      break;
-    case "due":
-      dom.output.due.innerHTML = dom.input.due.value;
-      break;
-    case "type":
-      switch (argument) {
-        case "bank":
-          document.querySelectorAll(".bank").forEach(el => {
-            el.style.display = "block";
-          });
-          dom.output.type.innerHTML = "bankovním převodem";
-          break;
-        case "cash":
-          document.querySelectorAll(".bank").forEach(el => {
-            el.style.display = "none";
-          });
-          dom.output.type.innerHTML = "hotově";
-          break;
-      }
-      break;
-  }
-}
-
 document.addEventListener("DOMContentLoaded", init);
-
-dom.input.number.addEventListener("input", make("number"));
 
 fetch('./info.json')
   .then(response => response.json())
@@ -119,3 +112,7 @@ ce.addEventListener('paste', function (e) {
   var text = e.clipboardData.getData('text/plain')
   document.execCommand('insertText', false, text)
 })
+function what(what: any, arg1: string): (this: HTMLInputElement, ev: KeyboardEvent) => any {
+  throw new Error("Function not implemented.");
+}
+

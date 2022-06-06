@@ -10,9 +10,8 @@
 <body>
     <aside id="input">
         <h1>Faktura</h1>
-        <input class="number" id="aside-number" type="number" placeholder="#" title="Číslo faktury" data-input="number"
-            onkeyup="invoice.make('number')">
-        <input class="due" type="date" placeholder="Due date" oninput="invoice.make('due')">
+        <input data-input="number" class="number" id="aside-number" type="number" placeholder="#" title="Číslo faktury" onkeyup="invoice.make('number')">
+        <input data-input="due" class="due" type="date" placeholder="Due date" oninput="invoice.make('due')">
         <div class="switch">
             <input type="radio" id="payment-bank" name="payment" onclick="invoice.make('type', 'bank')" checked>
             <label for="payment-bank">Převodem</label>
@@ -123,7 +122,8 @@
             <h2 data-invoice="price" contenteditable="true">CENA K ÚHRADĚ</hě>
         </div>
     </main>
-    <script src="script.js"></script>
 </body>
+
+<script src="script.js"></script>
 
 </html>

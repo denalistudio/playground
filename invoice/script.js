@@ -2,7 +2,7 @@
 const date = new Date();
 const dom = {
     input: {
-        number: document.querySelector("[data-input='number']"),
+        number: document.querySelectorAll("[data-input='number']")[0],
         due: document.querySelectorAll("#input > .due")[0]
     },
     output: {
@@ -26,7 +26,9 @@ const dom = {
             ico: document.querySelectorAll("[data-invoice='buyer-ico']")[0]
         }
     },
-    make: (what, argument) => {
+};
+const invoice = {
+    make: (what) => {
         switch (what) {
             case "number":
                 let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
@@ -36,34 +38,22 @@ const dom = {
             case "due":
                 dom.output.due.innerHTML = dom.input.due.value;
                 break;
-            case "type":
-                switch (argument) {
-                    case "bank":
-                        document.querySelectorAll(".bank").forEach(el => {
-                            el.style.display = "block";
-                        });
-                        dom.output.type.innerHTML = "bankovním převodem";
-                        break;
-                    case "cash":
-                        document.querySelectorAll(".bank").forEach(el => {
-                            el.style.display = "none";
-                        });
-                        dom.output.type.innerHTML = "hotově";
-                        break;
-                }
+            case "bank":
+                document.querySelectorAll(".bank").forEach(el => {
+                    el.style.display = "block";
+                });
+                dom.output.type.innerHTML = "bankovním převodem";
+                break;
+            case "cash":
+                document.querySelectorAll(".bank").forEach(el => {
+                    el.style.display = "none";
+                });
+                dom.output.type.innerHTML = "hotově";
                 break;
         }
     }
 };
-function init() {
-    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-    dom.output.issue.innerHTML = today;
-    dom.output.buyer.name.setAttribute("contenteditable", true);
-    dom.output.buyer.address1.setAttribute("contenteditable", true);
-    dom.output.buyer.address2.setAttribute("contenteditable", true);
-    dom.output.buyer.ico.setAttribute("contenteditable", true);
-}
-function make(what, argument) {
+function make(what) {
     switch (what) {
         case "number":
             let number = ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getFullYear()).slice(-2) + ("0000" + dom.input.number.value).slice(-4);
@@ -73,26 +63,29 @@ function make(what, argument) {
         case "due":
             dom.output.due.innerHTML = dom.input.due.value;
             break;
-        case "type":
-            switch (argument) {
-                case "bank":
-                    document.querySelectorAll(".bank").forEach(el => {
-                        el.style.display = "block";
-                    });
-                    dom.output.type.innerHTML = "bankovním převodem";
-                    break;
-                case "cash":
-                    document.querySelectorAll(".bank").forEach(el => {
-                        el.style.display = "none";
-                    });
-                    dom.output.type.innerHTML = "hotově";
-                    break;
-            }
+        case "bank":
+            document.querySelectorAll(".bank").forEach(el => {
+                el.style.display = "block";
+            });
+            dom.output.type.innerHTML = "bankovním převodem";
+            break;
+        case "cash":
+            document.querySelectorAll(".bank").forEach(el => {
+                el.style.display = "none";
+            });
+            dom.output.type.innerHTML = "hotově";
             break;
     }
 }
+function init() {
+    var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+    dom.output.issue.innerHTML = today;
+    dom.output.buyer.name.setAttribute("contenteditable", true);
+    dom.output.buyer.address1.setAttribute("contenteditable", true);
+    dom.output.buyer.address2.setAttribute("contenteditable", true);
+    dom.output.buyer.ico.setAttribute("contenteditable", true);
+}
 document.addEventListener("DOMContentLoaded", init);
-dom.input.number.addEventListener("input", make("number"));
 fetch('./info.json')
     .then(response => response.json())
     .then(data => {
@@ -111,3 +104,6 @@ ce.addEventListener('paste', function (e) {
     var text = e.clipboardData.getData('text/plain');
     document.execCommand('insertText', false, text);
 });
+function what(what, arg1) {
+    throw new Error("Function not implemented.");
+}
