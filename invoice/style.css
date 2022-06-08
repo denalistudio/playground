@@ -153,6 +153,9 @@ input:focus {
   body * {
     visibility: none;
   }
+  aside {
+    display: none;
+  }
   #invoice,
   #invoice * {
     visibility: visible;
